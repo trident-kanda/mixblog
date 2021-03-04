@@ -18,7 +18,7 @@ const Article = ({ category, id, title, description, date }: articleprops) => {
               <Image
                 className={utilstyles.pointer}
                 src={`/tmb/${id}.png`}
-                alt="aaaaa"
+                alt="Thumbnails"
                 width={1200}
                 height={630}
               />
