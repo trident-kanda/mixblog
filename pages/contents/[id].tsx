@@ -45,7 +45,7 @@ const Contents = ({ postData, lateStart, popularData }: idprops) => {
           <p className={maintextStyle.date}>{postData.date}</p>
           <Image
             src={`/tmb/${postData.id}.png`}
-            alt="aaaaa"
+            alt="Thumbnails"
             width={1200}
             height={630}
           />
