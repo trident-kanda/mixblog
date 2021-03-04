@@ -1,0 +1,60 @@
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #939597;
+  color: white;
+}
+
+.text_container {
+  h2 {
+    border-bottom: #939597 solid 5px;
+    margin: 0;
+  }
+  h3 {
+    background: #939597;
+    margin: 30px 0;
+    color: white;
+  }
+  strong {
+    background: linear-gradient(transparent 70%, #f5df4d 40%);
+  }
+  a {
+    color: #0033cc;
+  }
+  pre {
+    margin: 1em 0; /* ブロック前後の余白 */
+    padding: 1em; /* ブロック内の余白 */
+    border-radius: 5px; /* 角丸 */
+    background: #25292f; /* 背景色 */
+    color: #fff; /* 文字色 */
+    white-space: pre-wrap; /* はみ出たときに折り返す */
+  }
+  ul,
+  ol {
+    background: #fcfcfc; /*背景色*/
+    padding: 0.5em 0.5em 0.5em 2em; /*ボックス内の余白*/
+    border: solid 3px gray; /*線の種類 太さ 色*/
+    ul,
+    ol {
+      background: none;
+      border: none;
+    }
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+.main_container {
+  background: white;
+  padding: 35px;
+}
+.date {
+  color: #a6a7a8;
+}
+@media screen and (max-width: 896px) {
+  .main_container {
+    padding: 20px;
+  }
+}

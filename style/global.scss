@@ -1,0 +1,60 @@
+html {
+  background: #f1f1f1;
+  font-size: 100%;
+  body {
+    padding: 0;
+    margin: 0;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  main {
+    flex: 3.5;
+  }
+  aside {
+    flex: 1;
+  }
+}
+.container {
+  padding: 20px;
+}
+
+.article_container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+article {
+  width: 50%;
+  padding: 0 2% 5%;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: #0044cc;
+}
+
+@media screen and (max-width: 1200px) {
+  .wrapper {
+    width: 896px;
+  }
+}
+
+@media screen and (max-width: 896px) {
+  .wrapper {
+    width: 100%;
+    aside {
+      display: none;
+    }
+  }
+  article {
+    width: 100%;
+  }
+}

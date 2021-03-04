@@ -1,0 +1,17 @@
+.title {
+  word-break: break-all;
+  display: block;
+
+  a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #2b3542;
+    font-weight: bold;
+  }
+  a:hover {
+    color: #f5df4d;
+  }
+}
+.content {
+  margin-bottom: 15px;
+}
