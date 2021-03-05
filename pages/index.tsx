@@ -26,6 +26,10 @@ const Home = ({ postsData, length, lateStart, popularData }: indexprops) => {
           name="description"
           content="ゲーム、ボードゲーム、ウェブ技術など色々な情報を発信するブログです。自分が趣味を通して得た便利な情報や、共有したいと思った情報をマイペースに更新していきます。"
         />
+        <meta
+          name="google-site-verification"
+          content="7W7JOSSyUIT6QHSI1-007H6fs52VA8_3slTP69q2oMM"
+        />
       </Head>
       <Header />
       <Navbar />
