@@ -28,8 +28,7 @@ EFT の重要な設定の一つである POSTFX、設定をすることで視認
 
 ## LVNDMARK
 
-<a href="https://www.twitch.tv/lvndmark" rel="nofollow" 
-target="_blank">TwitchPage</a>
+<a href="https://www.twitch.tv/lvndmark" rel="nofollow" target="_blank">TwitchPage</a>
 
 <a id="LVNDMARK-option"></a>
 
