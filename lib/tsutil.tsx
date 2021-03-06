@@ -6,6 +6,7 @@ export interface indexprops {
     description: string;
     id: string;
     title: string;
+    update: string;
   }[];
   lateStart: {
     category: string;
@@ -13,6 +14,7 @@ export interface indexprops {
     description: string;
     id: string;
     title: string;
+    update: string;
   }[];
   popularData: {
     category: string;
@@ -20,6 +22,7 @@ export interface indexprops {
     description: string;
     id: string;
     title: string;
+    update: string;
   }[];
 }
 export interface pageprops {
@@ -31,6 +34,7 @@ export interface pageprops {
     description: string;
     id: string;
     title: string;
+    update: string;
   }[];
   lateStart: {
     category: string;
@@ -38,6 +42,7 @@ export interface pageprops {
     description: string;
     id: string;
     title: string;
+    update: string;
   }[];
   popularData: {
     category: string;
@@ -45,6 +50,7 @@ export interface pageprops {
     description: string;
     id: string;
     title: string;
+    update: string;
   }[];
 }
 export interface idprops {
@@ -55,6 +61,7 @@ export interface idprops {
     description: string;
     id: string;
     contentHtml: string;
+    update: string;
   };
   lateStart: {
     category: string;
@@ -62,6 +69,7 @@ export interface idprops {
     description: string;
     id: string;
     title: string;
+    update: string;
   }[];
   popularData: {
     category: string;
@@ -69,6 +77,7 @@ export interface idprops {
     description: string;
     id: string;
     title: string;
+    update: string;
   }[];
 }
 export interface idparams {
@@ -89,6 +98,7 @@ export interface categoryprops {
     description: string;
     id: string;
     title: string;
+    update: string;
   }[];
   lateStart: {
     category: string;
@@ -96,6 +106,7 @@ export interface categoryprops {
     description: string;
     id: string;
     title: string;
+    update: string;
   }[];
   popularData: {
     category: string;
@@ -103,6 +114,7 @@ export interface categoryprops {
     description: string;
     id: string;
     title: string;
+    update: string;
   }[];
 }
 export interface categorypageprops {
@@ -115,6 +127,7 @@ export interface categorypageprops {
     description: string;
     id: string;
     title: string;
+    update: string;
   }[];
   lateStart: {
     category: string;
@@ -122,6 +135,7 @@ export interface categorypageprops {
     description: string;
     id: string;
     title: string;
+    update: string;
   }[];
   popularData: {
     category: string;
@@ -129,6 +143,7 @@ export interface categorypageprops {
     description: string;
     id: string;
     title: string;
+    update: string;
   }[];
 }
 export interface articleprops {
@@ -145,6 +160,7 @@ export interface asideprops {
     description: string;
     id: string;
     title: string;
+    update: string;
   }[];
   popularData: {
     category: string;
@@ -152,6 +168,7 @@ export interface asideprops {
     description: string;
     id: string;
     title: string;
+    update: string;
   }[];
 }
 export interface asidearticleprops {
@@ -177,6 +194,7 @@ export interface commonprops {
     description: string;
     id: string;
     title: string;
+    update: string;
   }[];
   popularData: {
     category: string;
@@ -184,6 +202,7 @@ export interface commonprops {
     description: string;
     id: string;
     title: string;
+    update: string;
   }[];
 }
 export interface paginationbarprops {

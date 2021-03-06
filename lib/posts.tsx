@@ -8,6 +8,7 @@ import html from "remark-html";
 const postsDirectory = path.join(process.cwd(), "posts");
 const onePagelength = 14; //1ページに表示されるコンテンツ数
 
+//汎用
 const getAllPostData = (fileNames: string[]) => {
   return fileNames.map((fileName) => {
     // Remove ".md" from file name to get id
@@ -39,31 +40,33 @@ const getAllcategoryData = (fileNames: string[]) => {
     return matterResult.data.category;
   });
 };
-export function getAllPostIds() {
-  //全てのidを取得
-  const fileNames = fs.readdirSync(postsDirectory);
-  // Returns an array that looks like this:
-  // [
-  //   {
-  //     params: {
-  //       id: 'test'
-  //     }
-  //   },
-  //   {
-  //     params: {
-  //       id: 'test2'
-  //     }
-  //   }
-  // ]
+
+const getAllUpdateData = (fileNames: string[]) => {
   return fileNames.map((fileName) => {
-    return {
-      params: {
-        id: fileName.replace(/\.md$/, ""),
-      },
-    };
+    // Remove ".md" from file name to get id
+    // Read markdown file as string
+    const fullPath = path.join(postsDirectory, fileName);
+    const fileContents = fs.readFileSync(fullPath, "utf8");
+    // Use gray-matter to parse the post metadata section
+    const matterResult = matter(fileContents);
+    // Combine the data with the id
+    return matterResult.data.update;
+  });
+};
+
+//データ保存
+export function getAllIds() {
+  const fileNames = fs.readdirSync(postsDirectory);
+  return fileNames.map((fileName) => {
+    return fileName.replace(/\.md$/, "");
   });
 }
 
+export function getAllUpdate() {
+  const fileNames = fs.readdirSync(postsDirectory);
+  const allPostsData = getAllUpdateData(fileNames);
+  return allPostsData;
+}
 export async function getPostData(id: string) {
   //idの本文を取得
   const fullPath = path.join(postsDirectory, `${id}.md`);
@@ -102,20 +105,6 @@ export function getDesignatedPagearticle(page: number) {
     }
   });
   return sortData.slice(start, last);
-}
-
-//カテゴリを取得
-export function getAllcategory() {
-  const fileNames = fs.readdirSync(postsDirectory);
-  const allCategoryData = getAllcategoryData(fileNames);
-  //pathを送信
-  return allCategoryData.map((element) => {
-    return {
-      params: {
-        category: element,
-      },
-    };
-  });
 }
 
 export function getCategoryArticle(category: string, page: number) {
@@ -157,54 +146,12 @@ export function getLatestarticle() {
   return sortData.slice(0, 3); //何個取得するか
 }
 
-//ページング関係
-export function getPagenumber() {
-  //ここで必要なページ数を取得(URL用)
-  const fileNames = fs.readdirSync(postsDirectory);
-  //[ 'test.md', 'test2.md', 'test3.md', 'test4.md' ]
-  const pagelength = Math.ceil(fileNames.length / onePagelength); //ページ数
-  const pages = [];
-  for (let i = 2; i <= pagelength; i++) {
-    pages.push(`${i}`);
-  }
-  return pages.map((element) => {
-    return {
-      params: {
-        page: element,
-      },
-    };
-  });
-}
-
 export function getPagelength() {
   //必要なページ数
   const fileNames = fs.readdirSync(postsDirectory);
   //[ 'test.md', 'test2.md', 'test3.md', 'test4.md' ]
   const length = Math.ceil(fileNames.length / onePagelength); //ページ数
   return length;
-}
-
-export function getCategoryPagenumber() {
-  //ここで必要なページ数を取得(URL用)
-  const fileNames = fs.readdirSync(postsDirectory);
-  const allCategoryData = getAllcategoryData(fileNames);
-  const uniqueCategoryData = Array.from(new Set(allCategoryData));
-  //1
-  const params = uniqueCategoryData.map((Category) => {
-    const filterData = allCategoryData.filter((value) => {
-      return value === Category;
-    });
-    const pagelength = Math.ceil(filterData.length / onePagelength);
-    const pages = [];
-    for (let i = 2; i <= pagelength; i++) {
-      pages.push(`${i}`);
-    }
-    //pages2,3,4
-    return pages.map((element) => {
-      return { params: { page: [Category, "page", element] } };
-    });
-  });
-  return params.reduce((pre, current) => [...pre, ...current], []);
 }
 
 export function getCategoryPagelength(category: string) {
@@ -232,4 +179,71 @@ export function getDesignationNameArticle(checkArray: string[]) {
     return checkArray.indexOf(x.id) - checkArray.indexOf(y.id);
   });
   return sortData;
+}
+
+//params
+export function getPagenumber() {
+  //ここで必要なページ数を取得(URL用)
+  const fileNames = fs.readdirSync(postsDirectory);
+  //[ 'test.md', 'test2.md', 'test3.md', 'test4.md' ]
+  const pagelength = Math.ceil(fileNames.length / onePagelength); //ページ数
+  const pages = [];
+  for (let i = 2; i <= pagelength; i++) {
+    pages.push(`${i}`);
+  }
+  return pages.map((element) => {
+    return {
+      params: {
+        page: element,
+      },
+    };
+  });
+}
+
+export function getAllPostIds() {
+  //全てのidを取得
+  const fileNames = fs.readdirSync(postsDirectory);
+  return fileNames.map((fileName) => {
+    return {
+      params: {
+        id: fileName.replace(/\.md$/, ""),
+      },
+    };
+  });
+}
+
+export function getCategoryPagenumber() {
+  //ここで必要なページ数を取得(URL用)
+  const fileNames = fs.readdirSync(postsDirectory);
+  const allCategoryData = getAllcategoryData(fileNames);
+  const uniqueCategoryData = Array.from(new Set(allCategoryData));
+  //1
+  const params = uniqueCategoryData.map((Category) => {
+    const filterData = allCategoryData.filter((value) => {
+      return value === Category;
+    });
+    const pagelength = Math.ceil(filterData.length / onePagelength);
+    const pages = [];
+    for (let i = 2; i <= pagelength; i++) {
+      pages.push(`${i}`);
+    }
+    //pages2,3,4
+    return pages.map((element) => {
+      return { params: { page: [Category, "page", element] } };
+    });
+  });
+  return params.reduce((pre, current) => [...pre, ...current], []);
+}
+
+export function getAllcategory() {
+  const fileNames = fs.readdirSync(postsDirectory);
+  const allCategoryData = getAllcategoryData(fileNames);
+  //pathを送信
+  return allCategoryData.map((element) => {
+    return {
+      params: {
+        category: element,
+      },
+    };
+  });
 }
