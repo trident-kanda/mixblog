@@ -10,8 +10,8 @@ const Header = () => {
           <Image
             src="/logo.svg"
             alt="MIXBLOG"
-            width={330}
-            height={150}
+            width={297}
+            height={135}
             className={utilStyle.pointer}
           />
         </a>
