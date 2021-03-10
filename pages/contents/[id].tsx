@@ -19,12 +19,12 @@ import css from "highlight.js/lib/languages/css";
 import html from "highlight.js/lib/languages/xml";
 import "highlight.js/styles/atom-one-dark.css";
 import { idparams, idprops } from "../../lib/tsutil";
+hljs.registerLanguage("javascript", javascript);
+hljs.registerLanguage("xml", html);
+hljs.registerLanguage("css", css);
 const Contents = ({ postData, lateStart, popularData }: idprops) => {
   useEffect(() => {
-    hljs.registerLanguage("javascript", javascript);
-    hljs.registerLanguage("xml", html);
-    hljs.registerLanguage("css", css);
-    hljs.highlightAll();
+    hljs.initHighlighting();
     countdb(postData.id);
   }, []);
   return (
