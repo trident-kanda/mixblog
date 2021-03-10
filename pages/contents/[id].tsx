@@ -15,10 +15,14 @@ import { useEffect } from "react";
 import { countdb, getsort } from "../../firebase/firestore";
 import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
+import css from "highlight.js/lib/languages/css";
+import html from "highlight.js/lib/languages/xml";
 import "highlight.js/styles/atom-one-dark.css";
 import { idparams, idprops } from "../../lib/tsutil";
 
 hljs.registerLanguage("javascript", javascript);
+hljs.registerLanguage("xml", html);
+hljs.registerLanguage("css", css);
 const Contents = ({ postData, lateStart, popularData }: idprops) => {
   useEffect(() => {
     hljs.highlightAll();
