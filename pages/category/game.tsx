@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Article from "../../components/Article";
-import Aside from "../../components/Aside";
 import Navbar from "../../components/Navbar";
 import Header from "../../components/Header";
 import Paginationbar from "../../components/Paginationbar";
