@@ -1,6 +1,6 @@
 # MIXBLOG
 
-##　概要
+## 概要
 
 Nextjs の勉強用に作成したマークダウンブログです。
 getStaticProps や getStaticPaths を利用しています。
