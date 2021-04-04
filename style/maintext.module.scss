@@ -48,6 +48,28 @@
     max-width: 100%;
     height: auto;
   }
+  table,
+  th,
+  td {
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    line-height: 1.5;
+  }
+  table {
+    th {
+      width: 150px;
+      padding: 10px;
+      font-weight: bold;
+      vertical-align: top;
+      background: #939597;
+      color: #ffffff;
+    }
+    td {
+      width: 350px;
+      padding: 10px;
+      vertical-align: top;
+    }
+  }
 }
 .main_container {
   background: white;

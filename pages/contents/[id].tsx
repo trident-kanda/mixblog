@@ -24,7 +24,7 @@ hljs.registerLanguage("xml", html);
 hljs.registerLanguage("css", css);
 const Contents = ({ postData, lateStart, popularData }: idprops) => {
   useEffect(() => {
-    hljs.initHighlighting();
+    hljs.highlightAll();
     countdb(postData.id);
   }, []);
   return (
