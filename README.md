@@ -10,7 +10,8 @@ getStaticProps や getStaticPaths を利用しています。
 - React
 - Nextjs
 - TypeScript
-- HTML/CSS
+- HTML
+- Sass
 - FirebaseFirestore
 
 ## URL
