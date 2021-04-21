@@ -10,11 +10,11 @@ TailwindCSS は簡単にデザインを構築できるユーティリティー�
 
 CSS を書かずにデザインを作ることができ、コード量と時間を節約することができます。
 
-<a href="https://tailwindcss.com/" rel="nofollow" target="_blank">公式サイト</a>
+[公式サイト](https://tailwindcss.com/)
 
 ## インストール方法
 
-公式サイトの<a href="https://tailwindcss.com/docs/installation#2-add-tailwind-to-your-css" rel="nofollow" target="_blank">インストール方法</a>を参考に自分の使っている環境を選択してインストールしてください。
+公式サイトの[インストール方法](https://tailwindcss.com/docs/installation#2-add-tailwind-to-your-css)を参考に自分の使っている環境を選択してインストールしてください。
 
 CDN 版もあるので軽く触ってみたいという人は CDN 版をためしてみてください。
 
@@ -39,7 +39,7 @@ CDN 版もあるので軽く触ってみたいという人は CDN 版をため�
 
 rem は 1 上がる毎に 0.25rem ずつ上がっていきます。
 
-詳しくは<a href="https://tailwindcss.com/docs/width" rel="nofollow" target="_blank">こちら</a>
+詳しくは[こちら](https://tailwindcss.com/docs/width)
 
 ### margin pedding
 
@@ -64,7 +64,7 @@ rem は 1 上がる毎に 0.25rem ずつ上がっていきます。
 
 m の次に指定したい方向の頭文字を付けます top なら t 上下は x 左右は y になります。
 
-詳しくは<a href="https://tailwindcss.com/docs/margin" rel="nofollow" target="_blank">こちら</a>
+詳しくは[こちら](https://tailwindcss.com/docs/margin)
 
 ### font
 
@@ -79,11 +79,11 @@ m の次に指定したい方向の頭文字を付けます top なら t 上下�
 
 詳しくはこちら
 
-<a href="https://tailwindcss.com/docs/font-size" rel="nofollow" target="_blank">font-size</a>
+[font-size](https://tailwindcss.com/docs/font-size)
 
-<a href="https://tailwindcss.com/docs/font-weight" rel="nofollow" target="_blank">font-weight</a>
+[font-weight](https://tailwindcss.com/docs/font-weight)
 
-<a href="https://tailwindcss.com/docs/font-family" rel="nofollow" target="_blank">font-famiry</a>
+[font-famiry](https://tailwindcss.com/docs/font-family)
 
 ### color
 
@@ -98,7 +98,7 @@ m の次に指定したい方向の頭文字を付けます top なら t 上下�
 
 色の濃さの指定は 50 から 900 までの数値があり、数値が上がるほど濃くなります。
 
-詳しくは<a href="https://tailwindcss.com/docs/background-color" rel="nofollow" target="_blank">こちら</a>
+詳しくは[こちら](https://tailwindcss.com/docs/background-color)
 
 ### flex
 
@@ -142,7 +142,7 @@ xl = 1280px
 
 指定したい幅の後に：をつけてそのあとに適用さてたい CSS を付け加えます。
 
-詳しくは<a href="https://tailwindcss.com/docs/responsive-design" rel="nofollow" target="_blank">こちら</a>
+詳しくは[こちら](https://tailwindcss.com/docs/responsive-design)
 
 ## カスタム
 

@@ -27,7 +27,7 @@ tarkov の重要な設定の一つである POSTFX、設定をすることで視
 
 ## LVNDMARK
 
-<a href="https://www.twitch.tv/lvndmark" rel="nofollow" target="_blank">TwitchPage</a>
+[TwitchPage](https://www.twitch.tv/lvndmark)
 
 ### 設定値
 
@@ -57,7 +57,7 @@ Colorblind mode(カラーブラインド):None 0
 
 ## Summit1g
 
-<a href="https://www.twitch.tv/summit1g" rel="nofollow" target="_blank">TwitchPage</a>
+[TwitchPage](https://www.twitch.tv/summit1g)
 
 ### 設定値
 
@@ -85,7 +85,7 @@ Colorblind mode(カラーブラインド):None 0
 
 ## QuattroAce
 
-<a href="https://www.twitch.tv/quattroace" rel="nofollow" target="_blank">TwitchPage</a>
+[TwitchPage](https://www.twitch.tv/quattroace)
 
 ### 設定値
 
@@ -115,7 +115,7 @@ Colorblind mode(カラーブラインド):None 0
 
 ## Pestily
 
-<a href="https://www.twitch.tv/pestily" rel="nofollow" target="_blank">TwitchPage</a>
+[TwitchPage](https://www.twitch.tv/pestily)
 
 ### 設定値
 

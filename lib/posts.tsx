@@ -8,6 +8,7 @@ import rehypeShiki from "@leafac/rehype-shiki";
 import * as shiki from "shiki";
 import gfm from "remark-gfm";
 import html from "rehype-stringify";
+import externalLinks from "remark-external-links";
 const slug = require("remark-slug");
 //日本語カテゴリ追加予定
 const postsDirectory = path.join(process.cwd(), "posts");
@@ -79,6 +80,7 @@ export async function getPostData(id: string) {
   // Use gray-matter to parse the post metadata section
   const matterResult = matter(fileContents);
   const processedContent = await unified()
+    .use(externalLinks, { target: "_blank", rel: ["nofollow"] })
     .use(remarkParse)
     .use(slug)
     .use(remarkrehype)
