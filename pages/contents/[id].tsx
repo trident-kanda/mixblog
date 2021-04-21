@@ -16,7 +16,7 @@ import { countdb, getsort } from "../../firebase/firestore";
 import { idparams, idprops } from "../../lib/tsutil";
 const Contents = ({ postData, lateStart, popularData }: idprops) => {
   useEffect(() => {
-    // countdb(postData.id);
+    countdb(postData.id);
   }, []);
   return (
     <div>
