@@ -475,4 +475,4 @@ Supabase は Firebase よりもシンプルにログイン認証ができると�
 
 ### 参考にした記事
 
-<a href="https://github.com/vercel/nextjs-subscription-payments" rel="nofollow" target="_blank">公式の example</a>
+<a href="https://www.twitch.tv/pestily" rel="nofollow" target="_blank">公式 Example</a>
