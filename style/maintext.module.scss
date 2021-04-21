@@ -23,21 +23,17 @@
     color: #0033cc;
   }
   pre {
-    margin: 1em 0; /* ブロック前後の余白 */
-    padding: 1em; /* ブロック内の余白 */
-    border-radius: 5px; /* 角丸 */
-    background: #25292f; /* 背景色 */
-    color: #fff; /* 文字色 */
-    white-space: pre-wrap; /* はみ出たときに折り返す */
-    span {
-      font-size: 16px;
-    }
+    font-size: 120%;
+    line-height: 1.25;
+    border-radius: 0.3rem;
+    padding: 1rem;
+    overflow-x: scroll;
   }
   ul,
   ol {
-    background: #fcfcfc; /*背景色*/
-    padding: 0.5em 0.5em 0.5em 2em; /*ボックス内の余白*/
-    border: solid 3px gray; /*線の種類 太さ 色*/
+    background: #fcfcfc;
+    padding: 0.5em 0.5em 0.5em 2em;
+    border: solid 3px gray;
     ul,
     ol {
       background: none;

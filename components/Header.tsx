@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 const Header = () => {
   return (
-    <div className={HeaderStyle.header}>
+    <header className={HeaderStyle.header}>
       <Link href="/">
         <a>
           <Image
@@ -16,7 +16,7 @@ const Header = () => {
           />
         </a>
       </Link>
-    </div>
+    </header>
   );
 };
 

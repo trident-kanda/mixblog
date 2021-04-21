@@ -10,7 +10,7 @@ import {
   getDesignationNameArticle,
   getLatestarticle,
 } from "../../lib/posts";
-import Common from "../../components/Common";
+import Layout from "../../components/Layout";
 import Category from "../../components/Category";
 import BreadcrumbsList from "../../components/BreadcrumbsList";
 import { getsort } from "../../firebase/firestore";
@@ -41,7 +41,7 @@ const Page = ({
       <Header />
       <Navbar />
       <Category category={category} />
-      <Common lateStart={lateStart} popularData={popularData}>
+      <Layout lateStart={lateStart} popularData={popularData}>
         <BreadcrumbsList list={[category]} />
         <div className="article_container">
           {postsData.map(({ id, date, title, description }) => (
@@ -56,7 +56,7 @@ const Page = ({
           ))}
         </div>
         <Paginationbar count={length} page={pageNum} category={category} />
-      </Common>
+      </Layout>
     </div>
   );
 };

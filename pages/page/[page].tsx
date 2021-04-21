@@ -9,7 +9,7 @@ import {
 } from "../../lib/posts";
 import Article from "../../components/Article";
 import Header from "../../components/Header";
-import Common from "../../components/Common";
+import Layout from "../../components/Layout";
 import Navbar from "../../components/Navbar";
 import { getsort } from "../../firebase/firestore";
 import { pageprops } from "../../lib/tsutil";
@@ -33,7 +33,7 @@ const Page = ({
       </Head>
       <Header />
       <Navbar />
-      <Common lateStart={lateStart} popularData={popularData}>
+      <Layout lateStart={lateStart} popularData={popularData}>
         <div className="article_container">
           {postsData.map(({ id, date, title, category, description }) => (
             <Article
@@ -47,7 +47,7 @@ const Page = ({
           ))}
         </div>
         <Paginationbar count={length} page={pageNum} category={"home"} />
-      </Common>
+      </Layout>
     </div>
   );
 };

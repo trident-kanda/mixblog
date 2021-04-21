@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Article from "../../components/Article";
-import Aside from "../../components/Aside";
 import Navbar from "../../components/Navbar";
 import Header from "../../components/Header";
 import Paginationbar from "../../components/Paginationbar";
@@ -10,7 +9,7 @@ import {
   getDesignationNameArticle,
   getLatestarticle,
 } from "../../lib/posts";
-import Common from "../../components/Common";
+import Layout from "../../components/Layout";
 import Category from "../../components/Category";
 import BreadcrumbsList from "../../components/BreadcrumbsList";
 import { getsort } from "../../firebase/firestore";
@@ -35,7 +34,7 @@ const Other = ({
       <Header />
       <Navbar />
       <Category category={"other"} />
-      <Common lateStart={lateStart} popularData={popularData}>
+      <Layout lateStart={lateStart} popularData={popularData}>
         <BreadcrumbsList list={["other"]} />
         <div className="article_container">
           {postsData.map(({ id, date, title, description }) => (
@@ -50,7 +49,7 @@ const Other = ({
           ))}
         </div>
         <Paginationbar count={length} page={1} category={"other"} />
-      </Common>
+      </Layout>
     </div>
   );
 };

@@ -1,9 +1,7 @@
-import Header from "../components/Header";
-import Navbar from "../components/Navbar";
 import { commonprops } from "../lib/tsutil";
 import Aside from "./Aside";
 import Footer from "./Footer";
-const Common = ({ children, lateStart, popularData }: commonprops) => {
+const Layout = ({ children, lateStart, popularData }: commonprops) => {
   return (
     <div>
       <div className="wrapper">
@@ -17,4 +15,4 @@ const Common = ({ children, lateStart, popularData }: commonprops) => {
   );
 };
 
-export default Common;
+export default Layout;

@@ -15,10 +15,10 @@ html {
   width: 1200px;
   margin: 0 auto;
   main {
-    flex: 3.5;
+    width: 80%;
   }
   aside {
-    flex: 1;
+    width: 20%;
   }
 }
 .container {
@@ -50,6 +50,9 @@ a:hover {
 @media screen and (max-width: 896px) {
   .wrapper {
     width: 100%;
+    main {
+      width: 100%;
+    }
     aside {
       display: none;
     }

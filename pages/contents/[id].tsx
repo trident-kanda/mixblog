@@ -9,22 +9,13 @@ import Image from "next/image";
 import Header from "../../components/Header";
 import maintextStyle from "./../../style/maintext.module.scss";
 import Navbar from "../../components/Navbar";
-import Common from "../../components/Common";
+import Layout from "../../components/Layout";
 import BreadcrumbsList from "../../components/BreadcrumbsList";
 import { useEffect } from "react";
 import { countdb, getsort } from "../../firebase/firestore";
-import hljs from "highlight.js";
-import javascript from "highlight.js/lib/languages/javascript";
-import css from "highlight.js/lib/languages/css";
-import html from "highlight.js/lib/languages/xml";
-import "highlight.js/styles/atom-one-dark.css";
 import { idparams, idprops } from "../../lib/tsutil";
-hljs.registerLanguage("javascript", javascript);
-hljs.registerLanguage("xml", html);
-hljs.registerLanguage("css", css);
 const Contents = ({ postData, lateStart, popularData }: idprops) => {
   useEffect(() => {
-    hljs.highlightAll();
     countdb(postData.id);
   }, []);
   return (
@@ -42,7 +33,7 @@ const Contents = ({ postData, lateStart, popularData }: idprops) => {
       <div className={maintextStyle.title}>
         <h1>{postData.title}</h1>
       </div>
-      <Common lateStart={lateStart} popularData={popularData}>
+      <Layout lateStart={lateStart} popularData={popularData}>
         <BreadcrumbsList list={[postData.category, postData.title]} />
         <div className={maintextStyle.main_container}>
           <p className={maintextStyle.date}>{postData.date}</p>
@@ -57,7 +48,7 @@ const Contents = ({ postData, lateStart, popularData }: idprops) => {
             className={maintextStyle.text_container}
           />
         </div>
-      </Common>
+      </Layout>
     </div>
   );
 };

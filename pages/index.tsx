@@ -10,7 +10,7 @@ import {
 } from "../lib/posts";
 import Article from "../components/Article";
 import Navbar from "../components/Navbar";
-import Common from "../components/Common";
+import Layout from "../components/Layout";
 import { getsort } from "../firebase/firestore";
 import { indexprops } from "../lib/tsutil";
 const Home = ({ postsData, length, lateStart, popularData }: indexprops) => {
@@ -33,7 +33,7 @@ const Home = ({ postsData, length, lateStart, popularData }: indexprops) => {
       </Head>
       <Header />
       <Navbar />
-      <Common lateStart={lateStart} popularData={popularData}>
+      <Layout lateStart={lateStart} popularData={popularData}>
         <div className="article_container">
           {postsData.map(({ id, date, title, category, description }) => (
             <Article
@@ -47,7 +47,7 @@ const Home = ({ postsData, length, lateStart, popularData }: indexprops) => {
           ))}
         </div>
         <Paginationbar count={length} page={1} category={"home"} />
-      </Common>
+      </Layout>
     </div>
   );
 };

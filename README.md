@@ -13,6 +13,7 @@ getStaticProps や getStaticPaths を利用しています。
 - HTML
 - Sass
 - FirebaseFirestore
+- Shiki
 
 ## URL
 

@@ -22,7 +22,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "lib/posts.tsx"  ],
+, "lib/posts.ts"  ],
   "exclude": [
     "node_modules"
   ]

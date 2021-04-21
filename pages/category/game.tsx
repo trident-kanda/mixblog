@@ -9,7 +9,7 @@ import {
   getDesignationNameArticle,
   getLatestarticle,
 } from "../../lib/posts";
-import Common from "../../components/Common";
+import Layout from "../../components/Layout";
 import Category from "../../components/Category";
 import BreadcrumbsList from "../../components/BreadcrumbsList";
 import { getsort } from "../../firebase/firestore";
@@ -28,7 +28,7 @@ const Game = ({ length, postsData, lateStart, popularData }: categoryprops) => {
       <Header />
       <Navbar />
       <Category category={"game"} />
-      <Common lateStart={lateStart} popularData={popularData}>
+      <Layout lateStart={lateStart} popularData={popularData}>
         <BreadcrumbsList list={["game"]} />
         <div className="article_container">
           {postsData.map(({ id, date, title, description }) => (
@@ -43,7 +43,7 @@ const Game = ({ length, postsData, lateStart, popularData }: categoryprops) => {
           ))}
         </div>
         <Paginationbar count={length} page={1} category={"game"} />
-      </Common>
+      </Layout>
     </div>
   );
 };

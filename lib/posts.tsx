@@ -2,11 +2,13 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import unified from "unified";
-import markdown from "remark-parse";
-import remark2rehype from "remark-rehype";
+import remarkParse from "remark-parse";
+import remarkrehype from "remark-rehype";
+import rehypeShiki from "@leafac/rehype-shiki";
+import * as shiki from "shiki";
 import gfm from "remark-gfm";
 import html from "rehype-stringify";
-
+const slug = require("remark-slug");
 //日本語カテゴリ追加予定
 const postsDirectory = path.join(process.cwd(), "posts");
 const onePagelength = 14; //1ページに表示されるコンテンツ数
@@ -77,9 +79,13 @@ export async function getPostData(id: string) {
   // Use gray-matter to parse the post metadata section
   const matterResult = matter(fileContents);
   const processedContent = await unified()
-    .use(markdown)
-    .use(remark2rehype)
+    .use(remarkParse)
+    .use(slug)
+    .use(remarkrehype)
     .use(gfm)
+    .use(rehypeShiki, {
+      highlighter: await shiki.getHighlighter({ theme: "monokai" }),
+    })
     .use(html)
     .process(matterResult.content);
   const contentHtml = processedContent.toString();
