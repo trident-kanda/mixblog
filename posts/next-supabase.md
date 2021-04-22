@@ -116,7 +116,7 @@ const signup = () => {
   } = useForm();
   const password = useRef({});
   password.current = watch("password", "");
-  const signUp = async ({ email, password }: formData) => {
+  const runSignup = async ({ email, password }: formData) => {
     const res = await supabase.auth.signUp({
       email,
       password,
@@ -125,7 +125,7 @@ const signup = () => {
   return (
     <div className="h-screen flex center items-center justify-center">
       <div className="sm:max-w-xl bg-white  w-full sm:rounded-lg p-5 shadow">
-        <form onSubmit={handleSubmit(signUp)}>
+        <form onSubmit={handleSubmit(runSignup)}>
           <Controller
             control={control}
             name="email"
@@ -242,7 +242,7 @@ const signin = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const signIn = async ({ email, password }: formData) => {
+  const runSignin = async ({ email, password }: formData) => {
     const res = await supabase.auth.signIn({
       email,
       password,
@@ -251,7 +251,7 @@ const signin = () => {
   return (
     <div className="h-screen flex center items-center justify-center">
       <div className="sm:max-w-xl bg-white  w-full sm:rounded-lg p-5 shadow">
-        <form onSubmit={handleSubmit(signIn)}>
+        <form onSubmit={handleSubmit(runSignin)}>
           <Controller
             control={control}
             name="email"
