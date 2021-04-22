@@ -129,7 +129,7 @@ const signup = () => {
           <Controller
             control={control}
             name="email"
-            render={({ field: { onChange, onBlur, ref } }) => (
+            render={({ field: { onChange, onBlur } }) => (
               <Input
                 onBlur={onBlur}
                 onChange={onChange}
@@ -151,7 +151,7 @@ const signup = () => {
           <Controller
             control={control}
             name="password"
-            render={({ field: { onChange, onBlur, ref } }) => (
+            render={({ field: { onChange, onBlur } }) => (
               <Input
                 onBlur={onBlur}
                 onChange={onChange}
@@ -173,7 +173,7 @@ const signup = () => {
           <Controller
             control={control}
             name="confirmPassword"
-            render={({ field: { onChange, onBlur, ref } }) => (
+            render={({ field: { onChange, onBlur } }) => (
               <Input
                 onBlur={onBlur}
                 onChange={onChange}
@@ -255,7 +255,7 @@ const signin = () => {
           <Controller
             control={control}
             name="email"
-            render={({ field: { onChange, onBlur, ref } }) => (
+            render={({ field: { onChange, onBlur } }) => (
               <Input
                 onBlur={onBlur}
                 onChange={onChange}
@@ -277,7 +277,7 @@ const signin = () => {
           <Controller
             control={control}
             name="password"
-            render={({ field: { onChange, onBlur, ref } }) => (
+            render={({ field: { onChange, onBlur } }) => (
               <Input
                 onBlur={onBlur}
                 onChange={onChange}
