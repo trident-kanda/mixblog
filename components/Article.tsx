@@ -29,7 +29,7 @@ const Article = ({ category, id, title, description, date }: articleprops) => {
         <div className={articlestyles.title}>
           <Link href={`/contents/${id}`}>
             <h2>
-              <a>{title}</a>
+              <a className={utilstyles.pointer}>{title}</a>
             </h2>
           </Link>
         </div>
