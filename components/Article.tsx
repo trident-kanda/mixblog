@@ -28,7 +28,9 @@ const Article = ({ category, id, title, description, date }: articleprops) => {
         <p className={articlestyles.date}>{date}</p>
         <div className={articlestyles.title}>
           <Link href={`/contents/${id}`}>
-            <a>{title}</a>
+            <h2>
+              <a>{title}</a>
+            </h2>
           </Link>
         </div>
         <div className={articlestyles.description}>
