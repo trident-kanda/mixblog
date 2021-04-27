@@ -49,7 +49,7 @@ Colorblind mode(カラーブラインド):None 0
 
 ### 夜の画像
 
-<img src="/blogpic/eft-postfx/lvndmark.png" alt="lvndmark_pic">
+![lvndmark_pic](/blogpic/eft-postfx/lvndmark.png)
 
 昼と夜のバランスが取れた設定だと思います。
 
@@ -79,7 +79,7 @@ Colorblind mode(カラーブラインド):None 0
 
 ### 夜の画像
 
-<img src="/blogpic/eft-postfx/Summit1g.png" alt="Summit1g_pic">
+![Summit1g_pic](/blogpic/eft-postfx/Summit1g.png)
 
 上の LVNDMARK の設定を少し明るくしたような設定です。
 
@@ -107,7 +107,7 @@ Colorblind mode(カラーブラインド):None 0
 
 ### 夜の画像
 
-<img src="/blogpic/eft-postfx/QuattroAce.png" alt="QuattroAce_pic">
+![QuattroAce_pic](/blogpic/eft-postfx/QuattroAce.png)
 
 個人的にこの設定が一番見やすかったです。
 
@@ -137,7 +137,7 @@ Colorblind mode(カラーブラインド): None 0
 
 ### 夜の画像
 
-<img src="/blogpic/eft-postfx/Pestily.png" alt="Pestily_pic">
+![Pestily_pic](/blogpic/eft-postfx/Pestily.png)
 
 雰囲気重視の設定だと感じました。
 
