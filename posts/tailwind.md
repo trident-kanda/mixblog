@@ -6,9 +6,9 @@ description: "TailwindCSSは簡単にデザインを構築できるユーティ�
 update: "2021-03-09"
 ---
 
-TailwindCSS は簡単にデザインを構築できるユーティリティーファーストの CSS のフレームワークです。
+TailwindCSSは簡単にデザインを構築できるユーティリティーファーストのCSSのフレームワークです。
 
-CSS を書かずにデザインを作ることができ、コード量と時間を節約することができます。
+CSSを書かずにデザインを作ることができ、コード量と時間を節約することができます。
 
 [公式サイト](https://tailwindcss.com/)
 
@@ -16,7 +16,7 @@ CSS を書かずにデザインを作ることができ、コード量と時間�
 
 公式サイトの[インストール方法](https://tailwindcss.com/docs/installation#2-add-tailwind-to-your-css)を参考に自分の使っている環境を選択してインストールしてください。
 
-CDN 版もあるので軽く触ってみたいという人は CDN 版をためしてみてください。
+CDN 版もあるので軽く触ってみたいという人はCDN版をためしてみてください。
 
 ## クラス
 
@@ -33,11 +33,11 @@ CDN 版もあるので軽く触ってみたいという人は CDN 版をため�
 <div class="h-6"></div>
 ```
 
-先頭の文字は width なら w height なら h になります。
+先頭の文字はwidthならw、heightならhになります。
 
-パーセントは 1/3 を指定すれば 33.333%に、1/4 を指定すれば 25%になります。
+パーセントは1/3を指定すれば 33.333%に、1/4を指定すれば25%になります。
 
-rem は 1 上がる毎に 0.25rem ずつ上がっていきます。
+remは1上がる毎に0.25remずつ上がっていきます。
 
 詳しくは[こちら](https://tailwindcss.com/docs/width)
 
@@ -60,9 +60,9 @@ rem は 1 上がる毎に 0.25rem ずつ上がっていきます。
 <div class="mx-6"></div>
 ```
 
-頭文字を p にすれば padding になります。
+頭文字をpにすればpaddingになります。
 
-m の次に指定したい方向の頭文字を付けます top なら t 上下は x 左右は y になります。
+mの次に指定したい方向の頭文字を付けますtopならt上下はx左右はyになります。
 
 詳しくは[こちら](https://tailwindcss.com/docs/margin)
 
@@ -96,7 +96,7 @@ m の次に指定したい方向の頭文字を付けます top なら t 上下�
 <p class="bg-red-400">test</p>
 ```
 
-色の濃さの指定は 50 から 900 までの数値があり、数値が上がるほど濃くなります。
+色の濃さの指定は50から900までの数値があり、数値が上がるほど濃くなります。
 
 詳しくは[こちら](https://tailwindcss.com/docs/background-color)
 
@@ -111,9 +111,9 @@ m の次に指定したい方向の頭文字を付けます top なら t 上下�
 <div class="justify-center"></div>
 ```
 
-center の部分を around や start などにすると変更できます。
+centerの部分をaroundやstartなどにすると変更できます。
 
-flexbox は多くて載せきれないのでよく使う center だけを記載しました。
+flexboxは多くて載せきれないのでよく使うcenterだけを記載しました。
 
 詳しくは調べてみてください。
 
@@ -140,13 +140,13 @@ xl = 1280px
 
 のようになっています。
 
-指定したい幅の後に：をつけてそのあとに適用さてたい CSS を付け加えます。
+指定したい幅の後に：をつけてそのあとに適用さてたいCSSを付け加えます。
 
 詳しくは[こちら](https://tailwindcss.com/docs/responsive-design)
 
 ## カスタム
 
-tailwind.config.js に好きな値を設定することにより自分が使いたいスタイルをつくることができます。
+tailwind.config.jsに好きな値を設定することにより自分が使いたいスタイルをつくることができます。
 
 ```javascript
 module.exports = {
@@ -161,7 +161,7 @@ module.exports = {
 
 Theme 内に設定をすると規定値を上書きしてしまいます。
 
-規定値を残さずに自分で作りたい場合は theme を使いましょう。
+規定値を残さずに自分で作りたい場合はthemeを使いましょう。
 
 ```javascript
 module.exports = {
@@ -175,9 +175,9 @@ module.exports = {
 
 ### extend
 
-規定値を残して設定を拡張したいという場合は extend を使います。
+規定値を残して設定を拡張したいという場合はextendを使います。
 
-extend は theme 内に記述します。
+extendはtheme内に記述します。
 
 ```javascript
 module.exports = {
@@ -193,7 +193,7 @@ module.exports = {
 
 ### variants
 
-hover などの疑似クラスなどを追加できるようになります
+hoverなどの疑似クラスなどを追加できるようになります
 
 ```javascript
 module.exports = {
@@ -207,4 +207,4 @@ module.exports = {
 
 ## 最後に
 
-是非 TailWindCSS を使ってデザイン作ってみてください。
+是非TailWindCSSを使ってデザイン作ってみてください。

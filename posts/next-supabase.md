@@ -6,9 +6,9 @@ description: "SupabaseはFirebaseの代替プラットフォームとして注�
 update: "2021-04-21"
 ---
 
-Supabase は Firebase の代替プラットフォームとして注目されているプラットフォームです。
+SupabaseはFirebase の代替プラットフォームとして注目されているプラットフォームです。
 
-その中の Supabase Authentication と Nextjs を組み合わせたログイン認証のやり方を説明します。
+その中のSupabaseAuthenticationとNextjsを組み合わせたログイン認証のやり方を説明します。
 
 - [インストール](#インストール)
 - [コード](#コード)
@@ -23,7 +23,7 @@ Supabase は Firebase の代替プラットフォームとして注目されて�
 
 ### Nextjs
 
-まず Nextjs のインストールをします。
+まずNextjsのインストールをします。
 
 ```js
 npx create-next-app
@@ -31,7 +31,7 @@ npx create-next-app
 
 ### Supabase
 
-Supabase を使うための Supabase-js をインストール
+Supabaseを使うためのSupabase-js をインストール
 
 ```js
 npm i @supabase/supabase-js
@@ -39,7 +39,7 @@ npm i @supabase/supabase-js
 
 ### TypeScript
 
-今回は TypeScript で書くのでインストール
+今回はTypeScriptで書くのでインストール
 
 ```js
 npm install --save-dev typescript @types/react @types/node
@@ -47,17 +47,17 @@ npm install --save-dev typescript @types/react @types/node
 
 ### その他
 
-デザインのために TailwindCSS や Supabase ui
+デザインのためにTailwindCSSやSupabase ui
 
-form 作成に React Hook Form を使用しています。
+form作成にReactHookFormを使用しています。
 
 ## コード
 
 ### 設定ファイル
 
-**next.configjs**を作成し、Supabase の URL と KEY を記述します。
+**next.configjs**を作成し、SupabaseのURLとKEYを記述します。
 
-KEY や URL は Supabase の Setting の API を確認してください。
+KEYやURLはSupabaseのSettingのAPIを確認してください。
 
 ```js
 module.exports = {
@@ -83,7 +83,7 @@ export const supabase = createClient(
 
 ### サインアップ
 
-Supabase ログイン方法はこちら
+Supabaseログイン方法はこちら
 
 ```js
 const res = await supabase.auth.signUp({
@@ -319,7 +319,7 @@ export default signin;
 
 とりあえず今はログアウトボタンだけ配置します。
 
-Supabase のログアウト方法はこちら
+Supabaseのログアウト方法はこちら
 
 ```js
 supabase.auth.signOut();
@@ -352,7 +352,7 @@ export default function Home() {
 
 ### ユーザー管理
 
-ログイン状態を onAuthStateChange で監視できます。
+ログイン状態をonAuthStateChangeで監視できます。
 
 ログインやサインイン、ログアウトをした時に実行されます。
 
@@ -362,15 +362,15 @@ supabase.auth.onAuthStateChange((event, session) => {
 });
 ```
 
-session でセッション情報を取得できます。
+sessionでセッション情報を取得できます。
 
 ```js
 const session = supabase.auth.session();
 ```
 
-今回は ReactContext を使ってユーザを管理します。
+今回はReactContextを使ってユーザを管理します。
 
-UserContext では User 情報と Session 情報を管理します。
+UserContextではUser情報とSession情報を管理します。
 
 **util/UserContext.ts**を作成
 
@@ -388,9 +388,9 @@ export const UserContext = createContext<value >({user: null, session: null})
 
 \_app での記述はすべてのページで実行されます。
 
-ここでは session と onAuthStateChange を使ってユーザーのログインのチェックをしています。
+ここではsessionとonAuthStateChangeを使ってユーザーのログインのチェックをしています。
 
-Context.Provider で子要素で user 情報と session 情報を使えるようにしています。
+Context.Providerで子要素でuser情報とsession情報を使えるようにしています。
 
 ```js
 import { Session, User } from "@supabase/supabase-js";
@@ -429,9 +429,9 @@ export default MyApp;
 
 **index.tsx**に追記
 
-useContext で User 情報を取得しています。
+useContextでUser情報を取得しています。
 
-ログイン状態じゃない状態で index に入った時に signin に返しています。
+ログイン状態じゃない状態でindexに入った時にsigninに返しています。
 
 ```js
 import { useContext, useEffect } from "react";
@@ -450,7 +450,7 @@ useEffect(() => {
 
 **signin.tsx**+**signup.tsx**に追記
 
-ログインしている状態で入った時に index に返しています。
+ログインしている状態で入った時にindexに返しています。
 
 ```js
 import { useContext, useEffect } from "react";
@@ -469,9 +469,9 @@ useEffect(() => {
 
 ## 最後に
 
-Supabase は Firebase よりもシンプルにログイン認証ができると感じました。
+SupabaseはFirebaseよりもシンプルにログイン認証ができると感じました。
 
-まだ日本語の記事は少なめですが、とても便利なので使ってみては？
+まだ日本語の記事は少なめですが、とても便利なので使ってみてはいかかですか？
 
 ### 参考にした記事
 
