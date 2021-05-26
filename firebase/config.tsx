@@ -1,9 +1,9 @@
 export const firebaseConfig = {
-  apiKey: "AIzaSyCAnKLckYdnSvj5hIjCTkI9JMjggGJKX58",
-  authDomain: "mixblog-data.firebaseapp.com",
-  projectId: "mixblog-data",
-  storageBucket: "mixblog-data.appspot.com",
-  messagingSenderId: "956825964172",
-  appId: "1:956825964172:web:bff7e16a8b84f10846b5a9",
-  measurementId: "G-6NXE2CEHSF",
+  apiKey: process.env.API_KEY,
+  authDomain: process.env.AUTH_DOMAIN,
+  projectId: process.env.PROJECT_ID,
+  storageBucket: process.env.STORAGE_BUCKET,
+  messagingSenderId: process.env.MESSAGING_SENDERID,
+  appId: process.env.APP_ID,
+  measurementId: process.env.MEASUREMENT_ID,
 };
