@@ -14,6 +14,7 @@ import Layout from "../components/Layout";
 import { getsort } from "../firebase/firestore";
 import { indexprops } from "../lib/tsutil";
 const Home = ({ postsData, length, lateStart, popularData }: indexprops) => {
+  console.log(process.env.PROJECT_ID);
   return (
     <div>
       <Head>
