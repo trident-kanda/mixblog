@@ -31,7 +31,7 @@ const Web = ({ length, postsData, lateStart, popularData }: categoryprops) => {
       <Category category={"web"} />
       <Layout lateStart={lateStart} popularData={popularData}>
         <BreadcrumbsList list={["web"]} />
-        <div className="article_container">
+        <div className="articles_container">
           {postsData.map(({ id, date, title, description }) => (
             <Article
               id={id}

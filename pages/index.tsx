@@ -34,7 +34,7 @@ const Home = ({ postsData, length, lateStart, popularData }: indexprops) => {
       <Header />
       <Navbar />
       <Layout lateStart={lateStart} popularData={popularData}>
-        <div className="article_container">
+        <div className="articles_container">
           {postsData.map(({ id, date, title, category, description }) => (
             <Article
               id={id}

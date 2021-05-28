@@ -35,7 +35,7 @@ const Boardgame = ({
       <Category category={"boardgame"} />
       <Layout lateStart={lateStart} popularData={popularData}>
         <BreadcrumbsList list={["boardgame"]} />
-        <div className="article_container">
+        <div className="articles_container">
           {postsData.map(({ id, date, title, description }) => (
             <Article
               id={id}

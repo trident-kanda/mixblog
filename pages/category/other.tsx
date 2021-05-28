@@ -36,7 +36,7 @@ const Other = ({
       <Category category={"other"} />
       <Layout lateStart={lateStart} popularData={popularData}>
         <BreadcrumbsList list={["other"]} />
-        <div className="article_container">
+        <div className="articles_container">
           {postsData.map(({ id, date, title, description }) => (
             <Article
               id={id}

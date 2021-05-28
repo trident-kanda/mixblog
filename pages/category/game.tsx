@@ -30,7 +30,7 @@ const Game = ({ length, postsData, lateStart, popularData }: categoryprops) => {
       <Category category={"game"} />
       <Layout lateStart={lateStart} popularData={popularData}>
         <BreadcrumbsList list={["game"]} />
-        <div className="article_container">
+        <div className="articles_container">
           {postsData.map(({ id, date, title, description }) => (
             <Article
               id={id}

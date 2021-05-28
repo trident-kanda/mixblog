@@ -3,7 +3,7 @@ import Link from "next/link";
 import HamburgerIcon from "./HamburgerIcon";
 const Navbar = () => {
   return (
-    <div>
+    <>
       <div className={navbarStyles.category_container}>
         <Link href="/">
           <a>Home</a>
@@ -57,7 +57,7 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-    </div>
+    </>
   );
 };
 

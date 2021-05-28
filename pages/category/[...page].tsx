@@ -43,7 +43,7 @@ const Page = ({
       <Category category={category} />
       <Layout lateStart={lateStart} popularData={popularData}>
         <BreadcrumbsList list={[category]} />
-        <div className="article_container">
+        <div className="articles_container">
           {postsData.map(({ id, date, title, description }) => (
             <Article
               id={id}

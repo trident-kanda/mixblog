@@ -11,27 +11,21 @@ const BreadcrumbsList = ({ list }: breadprops) => {
         separator={<NavigateNextIcon fontSize="small" />}
         aria-label="breadcrumb"
       >
-        <div>
-          <Link href="/">
-            <a>Home</a>
-          </Link>
-        </div>
+        <Link href="/">
+          <a>Home</a>
+        </Link>
         {list.map((element: string, count: number) => {
           if (count === list.length - 1) {
             return (
-              <div key={count}>
-                <Typography className={BreadcrumbsStyle.capitalize}>
-                  {element}
-                </Typography>
-              </div>
+              <Typography className={BreadcrumbsStyle.capitalize} key={count}>
+                {element}
+              </Typography>
             );
           } else {
             return (
-              <div key={count}>
-                <Link href={`/category/${element}`}>
-                  <a className={BreadcrumbsStyle.capitalize}>{element}</a>
-                </Link>
-              </div>
+              <Link href={`/category/${element}`} key={count}>
+                <a className={BreadcrumbsStyle.capitalize}>{element}</a>
+              </Link>
             );
           }
         })}
