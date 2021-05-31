@@ -17,16 +17,10 @@ const onePagelength = 14; //1ページに表示されるコンテンツ数
 //汎用
 const getAllPostData = (fileNames: string[]) => {
   return fileNames.map((fileName) => {
-    // Remove ".md" from file name to get id
     const id = fileName.replace(/\.md$/, "");
-
-    // Read markdown file as string
     const fullPath = path.join(postsDirectory, fileName);
     const fileContents = fs.readFileSync(fullPath, "utf8");
-    // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents);
-    // Combine the data with the id
-
     return {
       id,
       ...matterResult.data,
@@ -36,26 +30,18 @@ const getAllPostData = (fileNames: string[]) => {
 
 const getAllcategoryData = (fileNames: string[]) => {
   return fileNames.map((fileName) => {
-    // Remove ".md" from file name to get id
-    // Read markdown file as string
     const fullPath = path.join(postsDirectory, fileName);
     const fileContents = fs.readFileSync(fullPath, "utf8");
-    // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents);
-    // Combine the data with the id
     return matterResult.data.category;
   });
 };
 
 const getAllUpdateData = (fileNames: string[]) => {
   return fileNames.map((fileName) => {
-    // Remove ".md" from file name to get id
-    // Read markdown file as string
     const fullPath = path.join(postsDirectory, fileName);
     const fileContents = fs.readFileSync(fullPath, "utf8");
-    // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents);
-    // Combine the data with the id
     return matterResult.data.update;
   });
 };
@@ -77,7 +63,6 @@ export async function getPostData(id: string) {
   //idの本文を取得
   const fullPath = path.join(postsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
-  // Use gray-matter to parse the post metadata section
   const matterResult = matter(fileContents);
   const processedContent = await unified()
     .use(externalLinks, { target: "_blank", rel: ["nofollow"] })
@@ -91,7 +76,6 @@ export async function getPostData(id: string) {
     .use(html)
     .process(matterResult.content);
   const contentHtml = processedContent.toString();
-  // Combine the data with the id
   return {
     id,
     contentHtml,
