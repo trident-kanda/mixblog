@@ -94,7 +94,6 @@ export function getDesignatedPagearticle(page: number) {
   const last = start + onePagelength;
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = getAllPostData(fileNames);
-  // Sort posts by date
   const sortData = allPostsData.sort((a: any, b: any) => {
     if (a.date < b.date) {
       return 1;
@@ -133,7 +132,6 @@ export function getLatestarticle() {
   //最新記事を取得
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = getAllPostData(fileNames);
-  // Sort posts by date
   const sortData = allPostsData.sort((a: any, b: any) => {
     if (a.date < b.date) {
       return 1;
@@ -169,7 +167,6 @@ export function getCategoryPagelength(category: string) {
 export function getDesignationNameArticle(checkArray: string[]) {
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = getAllPostData(fileNames);
-  // Sort posts by date
   const filterData = allPostsData.filter((value) => {
     return checkArray.includes(value.id);
   });
