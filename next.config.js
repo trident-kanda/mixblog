@@ -7,5 +7,6 @@ module.exports = {
     PROJECT_ID: process.env.PROJECT_ID,
     AUTH_DOMAIN: process.env.AUTH_DOMAIN,
     API_KEY: process.env.API_KEY,
+    GOOGLE_CONTENT: process.env.GOOGLE_CONTENT,
   },
 };

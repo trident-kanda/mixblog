@@ -28,7 +28,7 @@ const Home = ({ postsData, length, lateStart, popularData }: indexprops) => {
         />
         <meta
           name="google-site-verification"
-          content="7W7JOSSyUIT6QHSI1-007H6fs52VA8_3slTP69q2oMM"
+          content={process.env.GOOGLE_CONTENT}
         />
       </Head>
       <Header />
