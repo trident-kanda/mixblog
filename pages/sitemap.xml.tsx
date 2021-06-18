@@ -32,9 +32,9 @@ export const getServerSideProps = async ({
 }: GetServerSidePropsContext) => {
   const updates = getAllUpdate();
   const ids = getAllIds();
-  const xml = await generateSitemapXml(ids, updates); // xmlコードを生成する処理（後で書く）
+  const xml = await generateSitemapXml(ids, updates); 
   res.statusCode = 200;
-  res.setHeader("Cache-Control", "s-maxage=86400, stale-while-revalidate"); // 24時間のキャッシュ
+  res.setHeader("Cache-Control", "s-maxage=86400, stale-while-revalidate"); 
   res.setHeader("Content-Type", "text/xml");
   res.end(xml);
   return {
