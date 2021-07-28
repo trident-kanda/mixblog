@@ -13,6 +13,7 @@ import Navbar from "../components/Navbar";
 import Layout from "../components/Layout";
 import { getsort } from "../firebase/firestore";
 import { indexprops } from "../lib/tsutil";
+import TopButton from "../components/TopButton";
 const Home = ({ postsData, length, lateStart, popularData }: indexprops) => {
   return (
     <div>
@@ -33,6 +34,7 @@ const Home = ({ postsData, length, lateStart, popularData }: indexprops) => {
       </Head>
       <Header />
       <Navbar />
+      <TopButton />
       <Layout lateStart={lateStart} popularData={popularData}>
         <div className="articles_container">
           {postsData.map(({ id, date, title, category, description }) => (
