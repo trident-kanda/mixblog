@@ -14,6 +14,7 @@ import BreadcrumbsList from "../../components/BreadcrumbsList";
 import { useEffect } from "react";
 import { countdb, getsort } from "../../firebase/firestore";
 import { idparams, idprops } from "../../lib/tsutil";
+import TopButton from "../../components/TopButton";
 const Contents = ({ postData, lateStart, popularData }: idprops) => {
   useEffect(() => {
     countdb(postData.id);
@@ -28,6 +29,7 @@ const Contents = ({ postData, lateStart, popularData }: idprops) => {
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <meta name="description" content={postData.description} />
       </Head>
+      <TopButton />
       <Header />
       <Navbar />
       <div className={maintextStyle.title}>

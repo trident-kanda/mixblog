@@ -14,6 +14,7 @@ import Category from "../../components/Category";
 import BreadcrumbsList from "../../components/BreadcrumbsList";
 import { getsort } from "../../firebase/firestore";
 import { categoryprops } from "../../lib/tsutil";
+import TopButton from "../../components/TopButton";
 
 const Other = ({
   length,
@@ -31,6 +32,7 @@ const Other = ({
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
       </Head>
+      <TopButton />
       <Header />
       <Navbar />
       <Category category={"other"} />

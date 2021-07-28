@@ -1,6 +1,5 @@
 import type { DocumentContext, DocumentInitialProps } from "next/document";
 import Document, { Head, Html, Main, NextScript } from "next/document";
-import TopButton from "../components/TopButton";
 
 class MyDocument extends Document {
   static async getInitialProps(
@@ -14,7 +13,6 @@ class MyDocument extends Document {
       <Html lang="ja">
         <Head />
         <body>
-          <TopButton />
           <Main />
           <NextScript />
         </body>

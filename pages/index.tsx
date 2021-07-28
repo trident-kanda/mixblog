@@ -13,9 +13,10 @@ import Navbar from "../components/Navbar";
 import Layout from "../components/Layout";
 import { getsort } from "../firebase/firestore";
 import { indexprops } from "../lib/tsutil";
+import TopButton from "../components/TopButton";
 const Home = ({ postsData, length, lateStart, popularData }: indexprops) => {
   return (
-    <div>
+    <>
       <Head>
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -31,6 +32,7 @@ const Home = ({ postsData, length, lateStart, popularData }: indexprops) => {
           content={process.env.GOOGLE_CONTENT}
         />
       </Head>
+      <TopButton />
       <Header />
       <Navbar />
       <Layout lateStart={lateStart} popularData={popularData}>
@@ -48,7 +50,7 @@ const Home = ({ postsData, length, lateStart, popularData }: indexprops) => {
         </div>
         <Paginationbar count={length} page={1} category={"home"} />
       </Layout>
-    </div>
+    </>
   );
 };
 

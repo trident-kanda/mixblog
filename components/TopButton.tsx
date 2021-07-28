@@ -1,4 +1,5 @@
 import ArrowIcon from "./icon/ArrowIcon";
+import topButtonStyle from "../style/topButton.module.scss";
 const returnTop = () => {
   window.scrollTo({
     top: 0,
@@ -7,7 +8,7 @@ const returnTop = () => {
 };
 const TopButton = () => {
   return (
-    <div className="circle" onClick={returnTop}>
+    <div className={topButtonStyle.circle} onClick={returnTop}>
       <ArrowIcon />
     </div>
   );

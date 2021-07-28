@@ -15,6 +15,7 @@ import Category from "../../components/Category";
 import BreadcrumbsList from "../../components/BreadcrumbsList";
 import { getsort } from "../../firebase/firestore";
 import { categorypageprops, idcategoryparams } from "../../lib/tsutil";
+import TopButton from "../../components/TopButton";
 
 const Page = ({
   length,
@@ -38,6 +39,7 @@ const Page = ({
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
       </Head>
+      <TopButton />
       <Header />
       <Navbar />
       <Category category={category} />

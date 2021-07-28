@@ -39,22 +39,6 @@ a:hover {
   color: #0044cc;
 }
 
-.circle {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  background: #f5df4d;
-  opacity: 0.8;
-  position: fixed;
-  right: 50px;
-  bottom: 50px;
-  z-index: 100;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-
 @media screen and (max-width: 1200px) {
   .wrapper {
     width: 896px;
