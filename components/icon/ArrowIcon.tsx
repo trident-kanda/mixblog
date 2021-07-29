@@ -1,4 +1,3 @@
-import utilStyle from "../../style/utils.module.scss";
 const ArrowIcon = () => {
   return (
     <svg
