@@ -1,6 +1,6 @@
 import HeaderStyle from "./../style/Header.module.scss";
 import Link from "next/link";
-import HeaderIcon from "./icon/headerIcon";
+import HeaderIcon from "./icon/HeaderIcon";
 const Header = () => {
   return (
     <header className={HeaderStyle.header}>
