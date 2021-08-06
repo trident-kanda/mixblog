@@ -1,57 +1,25 @@
+type articleData = {
+  category: string;
+  date: string;
+  description: string;
+  id: string;
+  title: string;
+  update: string;
+};
+
 export interface indexprops {
   length: number;
-  postsData: {
-    category: string;
-    date: string;
-    description: string;
-    id: string;
-    title: string;
-    update: string;
-  }[];
-  lateStart: {
-    category: string;
-    date: string;
-    description: string;
-    id: string;
-    title: string;
-    update: string;
-  }[];
-  popularData: {
-    category: string;
-    date: string;
-    description: string;
-    id: string;
-    title: string;
-    update: string;
-  }[];
+  postsData: articleData[];
+  lateStart: articleData[];
+  popularData: articleData[];
 }
+
 export interface pageprops {
   length: number;
   page: string;
-  postsData: {
-    category: string;
-    date: string;
-    description: string;
-    id: string;
-    title: string;
-    update: string;
-  }[];
-  lateStart: {
-    category: string;
-    date: string;
-    description: string;
-    id: string;
-    title: string;
-    update: string;
-  }[];
-  popularData: {
-    category: string;
-    date: string;
-    description: string;
-    id: string;
-    title: string;
-    update: string;
-  }[];
+  postsData: articleData[];
+  lateStart: articleData[];
+  popularData: articleData[];
 }
 export interface idprops {
   postData: {
@@ -63,22 +31,8 @@ export interface idprops {
     contentHtml: string;
     update: string;
   };
-  lateStart: {
-    category: string;
-    date: string;
-    description: string;
-    id: string;
-    title: string;
-    update: string;
-  }[];
-  popularData: {
-    category: string;
-    date: string;
-    description: string;
-    id: string;
-    title: string;
-    update: string;
-  }[];
+  lateStart: articleData[];
+  popularData: articleData[];
 }
 export interface idparams {
   params: {
@@ -92,59 +46,17 @@ export interface idcategoryparams {
 }
 export interface categoryprops {
   length: number;
-  postsData: {
-    category: string;
-    date: string;
-    description: string;
-    id: string;
-    title: string;
-    update: string;
-  }[];
-  lateStart: {
-    category: string;
-    date: string;
-    description: string;
-    id: string;
-    title: string;
-    update: string;
-  }[];
-  popularData: {
-    category: string;
-    date: string;
-    description: string;
-    id: string;
-    title: string;
-    update: string;
-  }[];
+  postsData: articleData[];
+  lateStart: articleData[];
+  popularData: articleData[];
 }
 export interface categorypageprops {
   length: number;
   category: string;
   page: string;
-  postsData: {
-    category: string;
-    date: string;
-    description: string;
-    id: string;
-    title: string;
-    update: string;
-  }[];
-  lateStart: {
-    category: string;
-    date: string;
-    description: string;
-    id: string;
-    title: string;
-    update: string;
-  }[];
-  popularData: {
-    category: string;
-    date: string;
-    description: string;
-    id: string;
-    title: string;
-    update: string;
-  }[];
+  postsData: articleData[];
+  lateStart: articleData[];
+  popularData: articleData[];
 }
 export interface articleprops {
   id: string;
@@ -154,31 +66,11 @@ export interface articleprops {
   description: string;
 }
 export interface asideprops {
-  lateStart: {
-    category: string;
-    date: string;
-    description: string;
-    id: string;
-    title: string;
-    update: string;
-  }[];
-  popularData: {
-    category: string;
-    date: string;
-    description: string;
-    id: string;
-    title: string;
-    update: string;
-  }[];
+  lateStart: articleData[];
+  popularData: articleData[];
 }
 export interface asidearticleprops {
-  articleData: {
-    category: string;
-    date: string;
-    description: string;
-    id: string;
-    title: string;
-  }[];
+  articleData: articleData[];
 }
 export interface breadprops {
   list: string[];
@@ -188,22 +80,8 @@ export interface categorycomprops {
 }
 export interface commonprops {
   children: React.ReactNode;
-  lateStart: {
-    category: string;
-    date: string;
-    description: string;
-    id: string;
-    title: string;
-    update: string;
-  }[];
-  popularData: {
-    category: string;
-    date: string;
-    description: string;
-    id: string;
-    title: string;
-    update: string;
-  }[];
+  lateStart: articleData[];
+  popularData: articleData[];
 }
 export interface paginationbarprops {
   count: number;
