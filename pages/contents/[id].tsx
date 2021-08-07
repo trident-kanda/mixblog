@@ -17,7 +17,7 @@ import { idparams, idprops } from "../../lib/tsutil";
 import TopButton from "../../components/TopButton";
 const Contents = ({ postData, lateStart, popularData }: idprops) => {
   useEffect(() => {
-    // countdb(postData.id);
+    countdb(postData.id);
   }, []);
   return (
     <div>

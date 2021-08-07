@@ -5,7 +5,7 @@ type articleData = {
   id: string;
   title: string;
   update: string;
-  tag: string;
+  tag: string[];
 };
 
 export interface indexprops {
@@ -31,7 +31,7 @@ export interface idprops {
     id: string;
     contentHtml: string;
     update: string;
-    tag: string;
+    tag: string[];
   };
   lateStart: articleData[];
   popularData: articleData[];
