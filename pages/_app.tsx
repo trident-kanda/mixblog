@@ -4,7 +4,7 @@ import { analytics } from "../firebase/util";
 import "./../style/global.scss";
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
-    analytics();
+    // analytics();
   }, []);
   return <Component {...pageProps} />;
 }

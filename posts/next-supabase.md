@@ -4,6 +4,7 @@ date: "2021-04-21"
 category: "web"
 description: "SupabaseはFirebaseの代替プラットフォームとして注目されているプラットフォームです。その中のSupabase AuthenticationとNextjsを組み合わせたログイン認証のやり方を説明します。"
 update: "2021-04-21"
+tag: "TypeScript,Nextjs,Supabase"
 ---
 
 SupabaseはFirebase の代替プラットフォームとして注目されているプラットフォームです。

@@ -4,6 +4,7 @@ date: "2021-03-09"
 category: "web"
 description: "TailwindCSSは簡単にデザインを構築できるユーティリティーファーストのCSSのフレームワークです。CSSを書かずにデザインを作ることができ、コード量と時間を節約することができます。"
 update: "2021-03-09"
+tag: "TailwindCSS,CSS"
 ---
 
 TailwindCSSは簡単にデザインを構築できるユーティリティーファーストのCSSのフレームワークです。
