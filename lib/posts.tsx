@@ -73,7 +73,10 @@ export async function getPostData(id: string) {
     .use(rehypeShiki, {
       highlighter: await shiki.getHighlighter({ theme: "monokai" }),
     })
-    .use(html)
+    .use(html, {
+      upperDoctype: true,
+      allowDangerousHtml: true,
+    })
     .process(matterResult.content);
   const contentHtml = processedContent.toString();
   return {
