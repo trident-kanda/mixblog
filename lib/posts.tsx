@@ -65,7 +65,7 @@ export async function getPostData(id: string) {
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const matterResult = matter(fileContents);
   const processedContent = await unified()
-    .use(externalLinks, { target: "_blank", rel: ["nofollow"] })
+    .use(externalLinks, { target: "_blank", rel: ["nofollow", "noopener"] })
     .use(remarkParse)
     .use(slug)
     .use(remarkrehype)
