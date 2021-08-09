@@ -1,0 +1,14 @@
+.tag_container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.tag {
+  padding-left: 5px;
+  padding-right: 5px;
+  background: #939597;
+  color: white;
+  margin: 3px;
+}
+.tag:hover {
+  color: #f5df4d;
+}
