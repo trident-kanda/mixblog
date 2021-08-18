@@ -37,6 +37,15 @@ const getAllcategoryData = (fileNames: string[]) => {
   });
 };
 
+const getAlltagData = (fileNames: string[]) => {
+  return fileNames.map((fileName) => {
+    const fullPath = path.join(postsDirectory, fileName);
+    const fileContents = fs.readFileSync(fullPath, "utf8");
+    const matterResult = matter(fileContents);
+    return matterResult.data.tag;
+  });
+};
+
 const getAllUpdateData = (fileNames: string[]) => {
   return fileNames.map((fileName) => {
     const fullPath = path.join(postsDirectory, fileName);
