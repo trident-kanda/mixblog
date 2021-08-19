@@ -176,6 +176,20 @@ export function getCategoryPagelength(category: string) {
   return length;
 }
 
+export function gettagPagelength(tag: string) {
+  //必要なページ数
+  const fileNames = fs.readdirSync(postsDirectory);
+  const allCategoryData = getAllcategoryData(fileNames);
+  const filterData = allCategoryData.filter((value: string) => {
+    return value === tag;
+  });
+  const length = Math.ceil(filterData.length / onePagelength); //ページ数
+  if (length === 0) {
+    return 1;
+  }
+  return length;
+}
+
 export function getDesignationNameArticle(checkArray: string[]) {
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = getAllPostData(fileNames);
@@ -250,6 +264,19 @@ export function getAllcategory() {
     return {
       params: {
         category: element,
+      },
+    };
+  });
+}
+
+export function getAlltag() {
+  const fileNames = fs.readdirSync(postsDirectory);
+  const allCategoryData = getAlltagData(fileNames);
+  //pathを送信
+  return allCategoryData.map((element) => {
+    return {
+      params: {
+        tag: element,
       },
     };
   });
