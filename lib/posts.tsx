@@ -29,6 +29,7 @@ const getAllPostData = (fileNames: string[]) => {
 };
 
 const getAllcategoryData = (fileNames: string[]) => {
+  //全てのカテゴリを取得
   return fileNames.map((fileName) => {
     const fullPath = path.join(postsDirectory, fileName);
     const fileContents = fs.readFileSync(fullPath, "utf8");
@@ -38,6 +39,7 @@ const getAllcategoryData = (fileNames: string[]) => {
 };
 
 const getAlltagData = (fileNames: string[]) => {
+  //全てのタグを取得
   return fileNames.map((fileName) => {
     const fullPath = path.join(postsDirectory, fileName);
     const fileContents = fs.readFileSync(fullPath, "utf8");
@@ -177,7 +179,7 @@ export function getCategoryPagelength(category: string) {
 }
 
 export function gettagPagelength(tag: string) {
-  //必要なページ数
+  //指定したtagの必要なページ数
   const fileNames = fs.readdirSync(postsDirectory);
   const allCategoryData = getAllcategoryData(fileNames);
   const filterData = allCategoryData.filter((value: string) => {
