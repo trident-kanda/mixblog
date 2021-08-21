@@ -64,7 +64,7 @@ export function getAllIds() {
     return fileName.replace(/\.md$/, "");
   });
 }
-
+//サイトマップで使うアップデートの日付を取得
 export function getAllUpdate() {
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = getAllUpdateData(fileNames);
