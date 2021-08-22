@@ -40,12 +40,20 @@ const getAllcategoryData = (fileNames: string[]) => {
 
 const getAlltagData = (fileNames: string[]) => {
   //全てのタグを取得
-  return fileNames.map((fileName) => {
+  const tagData: string[] = [];
+  fileNames.forEach((fileName) => {
     const fullPath = path.join(postsDirectory, fileName);
     const fileContents = fs.readFileSync(fullPath, "utf8");
     const matterResult = matter(fileContents);
-    return matterResult.data.tag;
+    if (matterResult.data.tag.length === 1) {
+      tagData.push(matterResult.data.tag[0]);
+    } else {
+      matterResult.data.tag.forEach((tag: string) => {
+        tagData.push(tag);
+      });
+    }
   });
+  return tagData;
 };
 
 const getAllUpdateData = (fileNames: string[]) => {
@@ -240,7 +248,6 @@ export function getCategoryPagenumber() {
   const fileNames = fs.readdirSync(postsDirectory);
   const allCategoryData = getAllcategoryData(fileNames);
   const uniqueCategoryData = Array.from(new Set(allCategoryData));
-  //1
   const params = uniqueCategoryData.map((Category) => {
     const filterData = allCategoryData.filter((value) => {
       return value === Category;
@@ -253,6 +260,27 @@ export function getCategoryPagenumber() {
     //pages2,3,4
     return pages.map((element) => {
       return { params: { page: [Category, "page", element] } };
+    });
+  });
+  return params.reduce((pre, current) => [...pre, ...current], []);
+}
+
+export function getTagPagenumber() {
+  const fileNames = fs.readdirSync(postsDirectory);
+  const allTagData = getAlltagData(fileNames);
+  const uniqueTagData = Array.from(new Set(allTagData));
+  console.log(uniqueTagData);
+  const params = uniqueTagData.map((tag) => {
+    const filterData = allTagData.filter((value) => {
+      return value === tag;
+    });
+    const pagelength = Math.ceil(filterData.length / onePagelength);
+    const pages = [];
+    for (let i = 1; i <= pagelength; i++) {
+      pages.push(`${i}`);
+    }
+    return pages.map((element) => {
+      return { params: { page: [tag, "page", element] } };
     });
   });
   return params.reduce((pre, current) => [...pre, ...current], []);
