@@ -201,6 +201,7 @@ export function gettagPagelength(tag: string) {
 }
 
 export function getDesignationNameArticle(checkArray: string[]) {
+  //人気記事を取得
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = getAllPostData(fileNames);
   const filterData = allPostsData.filter((value) => {
@@ -266,6 +267,7 @@ export function getCategoryPagenumber() {
 }
 
 export function getTagPagenumber() {
+  //tagに対応したデータを取得
   const fileNames = fs.readdirSync(postsDirectory);
   const allTagData = getAlltagData(fileNames);
   const uniqueTagData = Array.from(new Set(allTagData));
