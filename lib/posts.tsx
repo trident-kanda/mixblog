@@ -271,7 +271,6 @@ export function getTagPagenumber() {
   const fileNames = fs.readdirSync(postsDirectory);
   const allTagData = getAlltagData(fileNames);
   const uniqueTagData = Array.from(new Set(allTagData));
-  console.log(uniqueTagData);
   const params = uniqueTagData.map((tag) => {
     const filterData = allTagData.filter((value) => {
       return value === tag;
@@ -281,7 +280,10 @@ export function getTagPagenumber() {
     for (let i = 1; i <= pagelength; i++) {
       pages.push(`${i}`);
     }
-    return pages.map((element) => {
+    return pages.map((element: string) => {
+      if (element === "1") {
+        return { params: { page: [tag] } };
+      }
       return { params: { page: [tag, "page", element] } };
     });
   });
