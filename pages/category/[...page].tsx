@@ -6,7 +6,7 @@ import Paginationbar from "../../components/Paginationbar";
 import {
   getCategoryArticle,
   getCategoryPagelength,
-  getCategoryPagenumber,
+  getCategoryPagePaths,
   getDesignationNameArticle,
   getLatestarticle,
 } from "../../lib/posts";
@@ -64,7 +64,7 @@ const Page = ({
 };
 
 export async function getStaticPaths() {
-  const paths = getCategoryPagenumber();
+  const paths = getCategoryPagePaths();
   return {
     paths,
     fallback: false,

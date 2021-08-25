@@ -244,7 +244,7 @@ export function getAllPostIds() {
   });
 }
 
-export function getCategoryPagenumber() {
+export function getCategoryPagePaths() {
   //ここで必要なページ数を取得(URL用)
   const fileNames = fs.readdirSync(postsDirectory);
   const allCategoryData = getAllcategoryData(fileNames);
@@ -266,7 +266,7 @@ export function getCategoryPagenumber() {
   return params.reduce((pre, current) => [...pre, ...current], []);
 }
 
-export function getTagPagenumber() {
+export function getTagPagePaths() {
   //tagに対応したデータを取得
   const fileNames = fs.readdirSync(postsDirectory);
   const allTagData = getAlltagData(fileNames);
