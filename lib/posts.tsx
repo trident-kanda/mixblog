@@ -189,8 +189,8 @@ export function getCategoryPagelength(category: string) {
 export function gettagPagelength(tag: string) {
   //指定したtagの必要なページ数
   const fileNames = fs.readdirSync(postsDirectory);
-  const allCategoryData = getAllcategoryData(fileNames);
-  const filterData = allCategoryData.filter((value: string) => {
+  const allTagData = getAlltagData(fileNames);
+  const filterData = allTagData.filter((value: string) => {
     return value === tag;
   });
   const length = Math.ceil(filterData.length / onePagelength); //ページ数
