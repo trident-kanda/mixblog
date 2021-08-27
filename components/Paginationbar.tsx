@@ -18,7 +18,7 @@ const Paginationbar = ({ count, page, category, tag }: paginationbarprops) => {
       if (value === 1) {
         Router.push(`/tag/${tag}`);
       } else {
-        Router.push(`/category/${tag}/page/${value}`);
+        Router.push(`/tag/${tag}/page/${value}`);
       }
     } else {
       if (value === 1) {

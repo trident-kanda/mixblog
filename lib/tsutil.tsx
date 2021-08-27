@@ -88,6 +88,6 @@ export interface commonprops {
 export interface paginationbarprops {
   count: number;
   page: number;
-  category: string;
+  category?: string;
   tag?: string;
 }

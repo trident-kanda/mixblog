@@ -163,7 +163,7 @@ export function getTagArticle(tag: string, page: number) {
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = getAllPostData(fileNames);
   const filterData = allPostsData.filter((value: any) => {
-    return value.tag === tag;
+    return value.tag.includes(tag);
   });
   const sortData = filterData.sort((a: any, b: any) => {
     if (a.date < b.date) {
