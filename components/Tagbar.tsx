@@ -8,7 +8,7 @@ const Tagbar = ({ tagList }: props) => {
     <div className={tagStyle.tag_container}>
       {tagList.map((tag, num) => {
         return (
-          <Link href={`tag/${tag}`}>
+          <Link href={`/tag/${tag}`}>
             <a className={tagStyle.tag} key={num}>
               {tag}
             </a>
