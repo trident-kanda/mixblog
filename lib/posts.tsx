@@ -9,6 +9,7 @@ import * as shiki from "shiki";
 import gfm from "remark-gfm";
 import html from "rehype-stringify";
 import externalLinks from "remark-external-links";
+import { NewsItem } from "sitemap";
 const slug = require("remark-slug");
 //日本語カテゴリ追加予定
 const postsDirectory = path.join(process.cwd(), "posts");
@@ -150,6 +151,30 @@ export function getCategoryArticle(category: string, page: number) {
 
   return sortData.slice(start, last);
 }
+
+export function getTagArticle(tag: string, page: number) {
+  let start: number;
+  if (page === 1) {
+    start = 0;
+  } else {
+    start = (page - 1) * onePagelength;
+  }
+  const last = start + onePagelength;
+  const fileNames = fs.readdirSync(postsDirectory);
+  const allPostsData = getAllPostData(fileNames);
+  const filterData = allPostsData.filter((value: any) => {
+    return value.tag === tag;
+  });
+  const sortData = filterData.sort((a: any, b: any) => {
+    if (a.date < b.date) {
+      return 1;
+    } else {
+      return -1;
+    }
+  });
+  return sortData.slice(start, last);
+}
+
 export function getLatestarticle() {
   //最新記事を取得
   const fileNames = fs.readdirSync(postsDirectory);
