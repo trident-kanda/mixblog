@@ -15,6 +15,7 @@ import { useEffect } from "react";
 import { countdb, getsort } from "../../firebase/firestore";
 import { idparams, idprops } from "../../lib/tsutil";
 import TopButton from "../../components/TopButton";
+import Tagbar from "../../components/Tagbar";
 const Contents = ({ postData, lateStart, popularData }: idprops) => {
   useEffect(() => {
     countdb(postData.id);
@@ -38,6 +39,7 @@ const Contents = ({ postData, lateStart, popularData }: idprops) => {
       <Layout lateStart={lateStart} popularData={popularData}>
         <BreadcrumbsList list={[postData.category, postData.title]} />
         <div className={maintextStyle.main_container}>
+          <Tagbar tagList={postData.tag} />
           <p className={maintextStyle.date}>{postData.date}</p>
           <Image
             src={`/tmb/${postData.id}.png`}
