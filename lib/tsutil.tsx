@@ -89,4 +89,5 @@ export interface paginationbarprops {
   count: number;
   page: number;
   category: string;
+  tag?: string;
 }
