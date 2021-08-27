@@ -60,6 +60,14 @@ export interface categorypageprops {
   lateStart: articleData[];
   popularData: articleData[];
 }
+export interface tagpageprops {
+  length: number;
+  tag: string;
+  page: string;
+  postsData: articleData[];
+  lateStart: articleData[];
+  popularData: articleData[];
+}
 export interface articleprops {
   id: string;
   title: string;
