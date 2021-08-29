@@ -9,7 +9,6 @@ import * as shiki from "shiki";
 import gfm from "remark-gfm";
 import html from "rehype-stringify";
 import externalLinks from "remark-external-links";
-import { NewsItem } from "sitemap";
 const slug = require("remark-slug");
 //日本語カテゴリ追加予定
 const postsDirectory = path.join(process.cwd(), "posts");
@@ -88,7 +87,9 @@ export async function getPostData(id: string) {
     .use(externalLinks, { target: "_blank", rel: ["nofollow", "noopener"] })
     .use(remarkParse)
     .use(slug)
-    .use(remarkrehype)
+    .use(remarkrehype, {
+      allowDangerousHtml: true,
+    })
     .use(gfm)
     .use(rehypeShiki, {
       highlighter: await shiki.getHighlighter({ theme: "monokai" }),
