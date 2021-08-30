@@ -14,7 +14,7 @@ const slug = require("remark-slug");
 const postsDirectory = path.join(process.cwd(), "posts");
 const onePagelength = 14; //1ページに表示されるコンテンツ数
 
-//汎用
+//全ての記事のデータを取得
 const getAllPostData = (fileNames: string[]) => {
   return fileNames.map((fileName) => {
     const id = fileName.replace(/\.md$/, "");
@@ -28,8 +28,8 @@ const getAllPostData = (fileNames: string[]) => {
   });
 };
 
+//全てのカテゴリを取得
 const getAllcategoryData = (fileNames: string[]) => {
-  //全てのカテゴリを取得
   return fileNames.map((fileName) => {
     const fullPath = path.join(postsDirectory, fileName);
     const fileContents = fs.readFileSync(fullPath, "utf8");
@@ -38,8 +38,8 @@ const getAllcategoryData = (fileNames: string[]) => {
   });
 };
 
+//全てのタグを取得
 const getAlltagData = (fileNames: string[]) => {
-  //全てのタグを取得
   const tagData: string[] = [];
   fileNames.forEach((fileName) => {
     const fullPath = path.join(postsDirectory, fileName);
@@ -55,7 +55,7 @@ const getAlltagData = (fileNames: string[]) => {
   });
   return tagData;
 };
-
+//全ての記事のアップデート時間を取得
 const getAllUpdateData = (fileNames: string[]) => {
   return fileNames.map((fileName) => {
     const fullPath = path.join(postsDirectory, fileName);
@@ -65,21 +65,23 @@ const getAllUpdateData = (fileNames: string[]) => {
   });
 };
 
-//データ保存
+//全てのidを取得
 export function getAllIds() {
   const fileNames = fs.readdirSync(postsDirectory);
   return fileNames.map((fileName) => {
     return fileName.replace(/\.md$/, "");
   });
 }
+
 //サイトマップで使うアップデートの日付を取得
 export function getAllUpdate() {
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = getAllUpdateData(fileNames);
   return allPostsData;
 }
+
+//指定したidのマークダウンファイルをHTMLに変換して返す
 export async function getPostData(id: string) {
-  //idの本文を取得
   const fullPath = path.join(postsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const matterResult = matter(fileContents);
@@ -107,8 +109,8 @@ export async function getPostData(id: string) {
   };
 }
 
+//指定したページの記事を取得
 export function getDesignatedPagearticle(page: number) {
-  //ページ数からonepagelength分取得
   let start: number;
   if (page === 1) {
     start = 0;
@@ -128,8 +130,8 @@ export function getDesignatedPagearticle(page: number) {
   return sortData.slice(start, last);
 }
 
+//指定したページ,カテゴリの記事をすべて取得する
 export function getCategoryArticle(category: string, page: number) {
-  //カテゴリの記事をすべて取得する  ＊＊変更ページ分を取得
   let start: number;
   if (page === 1) {
     start = 0;
@@ -153,6 +155,7 @@ export function getCategoryArticle(category: string, page: number) {
   return sortData.slice(start, last);
 }
 
+//指定したページ,タグの記事をすべて取得する
 export function getTagArticle(tag: string, page: number) {
   let start: number;
   if (page === 1) {
@@ -176,8 +179,8 @@ export function getTagArticle(tag: string, page: number) {
   return sortData.slice(start, last);
 }
 
+//最新記事を取得
 export function getLatestarticle() {
-  //最新記事を取得
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = getAllPostData(fileNames);
   const sortData = allPostsData.sort((a: any, b: any) => {
@@ -190,16 +193,15 @@ export function getLatestarticle() {
   return sortData.slice(0, 3); //何個取得するか
 }
 
+//必要なページ数を返す
 export function getPagelength() {
-  //必要なページ数
   const fileNames = fs.readdirSync(postsDirectory);
   //[ 'test.md', 'test2.md', 'test3.md', 'test4.md' ]
   const length = Math.ceil(fileNames.length / onePagelength); //ページ数
   return length;
 }
-
+//指定カテゴリに必要なページ数を返す
 export function getCategoryPagelength(category: string) {
-  //必要なページ数
   const fileNames = fs.readdirSync(postsDirectory);
   const allCategoryData = getAllcategoryData(fileNames);
   const filterData = allCategoryData.filter((value: string) => {
@@ -211,9 +213,8 @@ export function getCategoryPagelength(category: string) {
   }
   return length;
 }
-
+//指定タグに必要なページ数を返す
 export function gettagPagelength(tag: string) {
-  //指定したtagの必要なページ数
   const fileNames = fs.readdirSync(postsDirectory);
   const allTagData = getAlltagData(fileNames);
   const filterData = allTagData.filter((value: string) => {
@@ -226,8 +227,8 @@ export function gettagPagelength(tag: string) {
   return length;
 }
 
+//指定した記事を取得
 export function getDesignationNameArticle(checkArray: string[]) {
-  //人気記事を取得
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = getAllPostData(fileNames);
   const filterData = allPostsData.filter((value) => {
@@ -239,9 +240,8 @@ export function getDesignationNameArticle(checkArray: string[]) {
   return sortData;
 }
 
-//params
-export function getPagenumber() {
-  //ここで必要なページ数を取得(URL用)
+//必要なURLを作成
+export function getPagePaths() {
   const fileNames = fs.readdirSync(postsDirectory);
   //[ 'test.md', 'test2.md', 'test3.md', 'test4.md' ]
   const pagelength = Math.ceil(fileNames.length / onePagelength); //ページ数
@@ -258,8 +258,8 @@ export function getPagenumber() {
   });
 }
 
+//全てのidを取得
 export function getAllPostIds() {
-  //全てのidを取得
   const fileNames = fs.readdirSync(postsDirectory);
   return fileNames.map((fileName) => {
     return {
@@ -270,8 +270,8 @@ export function getAllPostIds() {
   });
 }
 
+//カテゴリに必要なURLを作成
 export function getCategoryPagePaths() {
-  //ここで必要なページ数を取得(URL用)
   const fileNames = fs.readdirSync(postsDirectory);
   const allCategoryData = getAllcategoryData(fileNames);
   const uniqueCategoryData = Array.from(new Set(allCategoryData));
@@ -292,8 +292,8 @@ export function getCategoryPagePaths() {
   return params.reduce((pre, current) => [...pre, ...current], []);
 }
 
+//tagに必要なURLを作成
 export function getTagPagePaths() {
-  //tagに対応したデータを取得
   const fileNames = fs.readdirSync(postsDirectory);
   const allTagData = getAlltagData(fileNames);
   const uniqueTagData = Array.from(new Set(allTagData));
@@ -314,30 +314,4 @@ export function getTagPagePaths() {
     });
   });
   return params.reduce((pre, current) => [...pre, ...current], []);
-}
-
-export function getAllcategory() {
-  const fileNames = fs.readdirSync(postsDirectory);
-  const allCategoryData = getAllcategoryData(fileNames);
-  //pathを送信
-  return allCategoryData.map((element) => {
-    return {
-      params: {
-        category: element,
-      },
-    };
-  });
-}
-
-export function getAlltag() {
-  const fileNames = fs.readdirSync(postsDirectory);
-  const allCategoryData = getAlltagData(fileNames);
-  //pathを送信
-  return allCategoryData.map((element) => {
-    return {
-      params: {
-        tag: element,
-      },
-    };
-  });
 }
