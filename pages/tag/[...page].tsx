@@ -1,4 +1,5 @@
 import {
+  getDesignationNameArticle,
   getLatestarticle,
   getTagArticle,
   gettagPagelength,
@@ -83,7 +84,8 @@ export async function getStaticProps({ params }: idcategoryparams) {
   const length = gettagPagelength(tag);
   // const postsData = getCategoryArticle(category, page);
   const lateStart = getLatestarticle();
-  const popularData = await getsort();
+  const popularItem = await getsort();
+  const popularData = getDesignationNameArticle(popularItem);
   const postsData = getTagArticle(tag, page);
   return {
     props: {
