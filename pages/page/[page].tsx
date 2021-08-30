@@ -5,7 +5,7 @@ import {
   getDesignationNameArticle,
   getLatestarticle,
   getPagelength,
-  getPagenumber,
+  getPagePaths,
 } from "../../lib/posts";
 import Article from "../../components/Article";
 import Header from "../../components/Header";
@@ -53,7 +53,7 @@ const Page = ({
 };
 
 export async function getStaticPaths() {
-  const paths = getPagenumber();
+  const paths = getPagePaths();
   return {
     paths,
     fallback: false,
