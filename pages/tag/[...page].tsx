@@ -5,11 +5,7 @@ import {
   gettagPagelength,
   getTagPagePaths,
 } from "../../lib/posts";
-import {
-  categorypageprops,
-  idcategoryparams,
-  tagpageprops,
-} from "../../lib/tsutil";
+import { idcategoryparams, tagpageprops } from "../../lib/tsutil";
 import Head from "next/head";
 import TopButton from "../../components/TopButton";
 import Header from "../../components/Header";
@@ -82,7 +78,6 @@ export async function getStaticProps({ params }: idcategoryparams) {
     page = 1;
   }
   const length = gettagPagelength(tag);
-  // const postsData = getCategoryArticle(category, page);
   const lateStart = getLatestarticle();
   const popularItem = await getsort();
   const popularData = getDesignationNameArticle(popularItem);
