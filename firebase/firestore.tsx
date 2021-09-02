@@ -33,7 +33,7 @@ export const countdb = (id: string) => {
     .catch((error) => {});
 };
 
-export const getsort = async () => {
+export const getPopularData = async () => {
   const data: string[] = [];
   const snapshot = await db
     .collection("data")

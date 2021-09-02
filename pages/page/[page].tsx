@@ -11,7 +11,7 @@ import Article from "../../components/Article";
 import Header from "../../components/Header";
 import Layout from "../../components/Layout";
 import Navbar from "../../components/Navbar";
-import { getsort } from "../../firebase/firestore";
+import { getPopularData } from "../../firebase/firestore";
 import { pageprops } from "../../lib/tsutil";
 const Page = ({
   length,
@@ -65,7 +65,7 @@ export async function getStaticProps({ params }: { params: { page: number } }) {
   const page = params.page;
   const postsData = getDesignatedPagearticle(page);
   const lateStart = getLatestarticle();
-  const popularItem = await getsort();
+  const popularItem = await getPopularData();
   const popularData = getDesignationNameArticle(popularItem);
   return {
     props: {

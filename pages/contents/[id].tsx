@@ -12,7 +12,7 @@ import Navbar from "../../components/Navbar";
 import Layout from "../../components/Layout";
 import BreadcrumbsList from "../../components/BreadcrumbsList";
 import { useEffect } from "react";
-import { countdb, getsort } from "../../firebase/firestore";
+import { countdb, getPopularData } from "../../firebase/firestore";
 import { idparams, idprops } from "../../lib/tsutil";
 import TopButton from "../../components/TopButton";
 import Tagbar from "../../components/Tagbar";
@@ -68,7 +68,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }: idparams) {
   const postData = await getPostData(params.id);
   const lateStart = getLatestarticle();
-  const popularItem = await getsort();
+  const popularItem = await getPopularData();
   const popularData = getDesignationNameArticle(popularItem);
 
   return {

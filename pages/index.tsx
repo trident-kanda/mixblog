@@ -11,7 +11,7 @@ import {
 import Article from "../components/Article";
 import Navbar from "../components/Navbar";
 import Layout from "../components/Layout";
-import { getsort } from "../firebase/firestore";
+import { getPopularData } from "../firebase/firestore";
 import { indexprops } from "../lib/tsutil";
 import TopButton from "../components/TopButton";
 const Home = ({ postsData, length, lateStart, popularData }: indexprops) => {
@@ -58,7 +58,7 @@ export async function getStaticProps() {
   const postsData = getDesignatedPagearticle(1); //1~14の記事を取得するよう変更
   const length: number = getPagelength(); //ページの必要数
   const lateStart = getLatestarticle();
-  const popularItem = await getsort();
+  const popularItem = await getPopularData();
   const popularData = getDesignationNameArticle(popularItem);
   return {
     props: {

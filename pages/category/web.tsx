@@ -13,7 +13,7 @@ import {
 import Layout from "../../components/Layout";
 import Category from "../../components/Category";
 import BreadcrumbsList from "../../components/BreadcrumbsList";
-import { getsort } from "../../firebase/firestore";
+import { getPopularData } from "../../firebase/firestore";
 import { categoryprops } from "../../lib/tsutil";
 import TopButton from "../../components/TopButton";
 const Web = ({ length, postsData, lateStart, popularData }: categoryprops) => {
@@ -55,7 +55,7 @@ export async function getStaticProps() {
   const length = getCategoryPagelength("web");
   const postsData = getCategoryArticle("web", 1);
   const lateStart = getLatestarticle();
-  const popularItem = await getsort();
+  const popularItem = await getPopularData();
   const popularData = getDesignationNameArticle(popularItem);
   return {
     props: {

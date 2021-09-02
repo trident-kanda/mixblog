@@ -11,7 +11,7 @@ import TopButton from "../../components/TopButton";
 import Header from "../../components/Header";
 import Navbar from "../../components/Navbar";
 import Tag from "../../components/Tag";
-import { getsort } from "../../firebase/firestore";
+import { getPopularData } from "../../firebase/firestore";
 import Layout from "../../components/Layout";
 import BreadcrumbsList from "../../components/BreadcrumbsList";
 import Paginationbar from "../../components/Paginationbar";
@@ -79,7 +79,7 @@ export async function getStaticProps({ params }: idcategoryparams) {
   }
   const length = gettagPagelength(tag);
   const lateStart = getLatestarticle();
-  const popularItem = await getsort();
+  const popularItem = await getPopularData();
   const popularData = getDesignationNameArticle(popularItem);
   const postsData = getTagArticle(tag, page);
   return {
