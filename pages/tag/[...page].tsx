@@ -50,7 +50,6 @@ const Page = ({
               date={date}
               title={title}
               key={id}
-              category={tag}
               description={description}
               tag={tag}
             />
