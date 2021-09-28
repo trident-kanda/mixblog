@@ -72,7 +72,8 @@ export interface articleprops {
   id: string;
   title: string;
   date: string;
-  category: string;
+  category?: string;
+  tag?:string
   description: string;
 }
 export interface asideprops {

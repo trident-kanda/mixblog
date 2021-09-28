@@ -52,6 +52,7 @@ const Page = ({
               key={id}
               category={tag}
               description={description}
+              tag={tag}
             />
           ))}
         </div>
