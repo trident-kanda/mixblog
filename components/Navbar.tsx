@@ -11,8 +11,8 @@ const Navbar = () => {
         <Link href="/category/game">
           <a>Game</a>
         </Link>
-        <Link href="/category/boardgame">
-          <a>Boardgame</a>
+        <Link href="/category/music">
+          <a>Music</a>
         </Link>
         <Link href="/category/web">
           <a>Web</a>

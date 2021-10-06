@@ -24,7 +24,7 @@ const Boardgame = ({
   return (
     <div>
       <Head>
-        <title>Boardgame | MIXBLOG</title>
+        <title>Music | MIXBLOG</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="robots" content="noindex" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -34,9 +34,9 @@ const Boardgame = ({
       <TopButton />
       <Header />
       <Navbar />
-      <Category category={"boardgame"} />
+      <Category category={"music"} />
       <Layout lateStart={lateStart} popularData={popularData}>
-        <BreadcrumbsList list={["boardgame"]} />
+        <BreadcrumbsList list={["music"]} />
         <div className="articles_container">
           {postsData.map(({ id, date, title, description }) => (
             <Article
@@ -45,18 +45,18 @@ const Boardgame = ({
               title={title}
               key={id}
               description={description}
-              category={"boardgame"}
+              category={"music"}
             />
           ))}
         </div>
-        <Paginationbar count={length} page={1} category={"boardgame"} />
+        <Paginationbar count={length} page={1} category={"music"} />
       </Layout>
     </div>
   );
 };
 export async function getStaticProps() {
-  const length = getCategoryPagelength("boardgame");
-  const postsData = getCategoryArticle("boardgame", 1);
+  const length = getCategoryPagelength("music");
+  const postsData = getCategoryArticle("music", 1);
   const lateStart = getLatestarticle();
   const popularItem = await getPopularData();
   const popularData = getDesignationNameArticle(popularItem);
