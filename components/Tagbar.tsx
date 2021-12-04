@@ -8,10 +8,8 @@ const Tagbar = ({ tagList }: props) => {
     <div className={tagStyle.tag_container}>
       {tagList.map((tag, num) => {
         return (
-          <Link href={`/tag/${tag}`}>
-            <a className={tagStyle.tag} key={num}>
-              {tag}
-            </a>
+          <Link href={`/tag/${tag}`} key={num}>
+            <a className={tagStyle.tag}>{tag}</a>
           </Link>
         );
       })}
