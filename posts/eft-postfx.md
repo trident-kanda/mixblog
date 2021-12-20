@@ -30,6 +30,10 @@ tarkovの重要な設定の一つであるPOSTFX、設定をすることで視�
 
 [TwitchPage](https://www.twitch.tv/lvndmark)
 
+参考
+
+<iframe src="https://clips.twitch.tv/embed?clip=NimbleComfortableLettuceChefFrank&parent=mixblog.vercel.app&autoplay=false" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+
 ### 設定値
 
 Brightness(輝度):0
@@ -60,6 +64,10 @@ Colorblind mode(カラーブラインド):None 0
 
 [TwitchPage](https://www.twitch.tv/summit1g)
 
+参考
+
+<iframe src="https://clips.twitch.tv/embed?clip=DreamySavageDurianBlargNaut&parent=mixblog.vercel.app&autoplay=false" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+
 ### 設定値
 
 Brightness(輝度):20
@@ -87,6 +95,10 @@ Colorblind mode(カラーブラインド):None 0
 ## QuattroAce
 
 [TwitchPage](https://www.twitch.tv/quattroace)
+
+参考
+
+<iframe src="https://clips.twitch.tv/embed?clip=ThoughtfulTriangularButterNotLikeThis-OfN-L8e3clZaqlcA&parent=mixblog.vercel.app&autoplay=false" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
 
 ### 設定値
 
@@ -117,6 +129,10 @@ Colorblind mode(カラーブラインド):None 0
 ## Pestily
 
 [TwitchPage](https://www.twitch.tv/pestily)
+
+参考
+
+<iframe src="https://clips.twitch.tv/embed?clip=VictoriousHilariousBeeTriHard-lHAwyKHchfeSM_Gi&parent=mixblog.vercel.app&autoplay=false" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
 
 ### 設定値
 
