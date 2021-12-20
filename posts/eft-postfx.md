@@ -32,7 +32,7 @@ tarkovの重要な設定の一つであるPOSTFX、設定をすることで視�
 
 参考
 
-<iframe src="https://clips.twitch.tv/embed?clip=NimbleComfortableLettuceChefFrank&parent=mixblog.vercel.app&autoplay=false" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+https://www.twitch.tv/lvndmark/clip/NimbleComfortableLettuceChefFrank?lang=ja-JP
 
 ### 設定値
 
@@ -66,7 +66,7 @@ Colorblind mode(カラーブラインド):None 0
 
 参考
 
-<iframe src="https://clips.twitch.tv/embed?clip=DreamySavageDurianBlargNaut&parent=mixblog.vercel.app&autoplay=false" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+https://www.twitch.tv/summit1g/clip/DreamySavageDurianBlargNaut
 
 ### 設定値
 
@@ -98,7 +98,7 @@ Colorblind mode(カラーブラインド):None 0
 
 参考
 
-<iframe src="https://clips.twitch.tv/embed?clip=ThoughtfulTriangularButterNotLikeThis-OfN-L8e3clZaqlcA&parent=mixblog.vercel.app&autoplay=false" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+https://www.twitch.tv/quattroace/clip/ThoughtfulTriangularButterNotLikeThis-OfN-L8e3clZaqlcA?filter=clips&range=30d&sort=time
 
 ### 設定値
 
@@ -132,7 +132,7 @@ Colorblind mode(カラーブラインド):None 0
 
 参考
 
-<iframe src="https://clips.twitch.tv/embed?clip=VictoriousHilariousBeeTriHard-lHAwyKHchfeSM_Gi&parent=mixblog.vercel.app&autoplay=false" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+https://www.twitch.tv/pestily/clip/VictoriousHilariousBeeTriHard-lHAwyKHchfeSM_Gi?filter=clips&range=all&sort=time
 
 ### 設定値
 
