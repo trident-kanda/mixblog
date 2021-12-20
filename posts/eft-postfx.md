@@ -56,7 +56,7 @@ Colorblind mode(カラーブラインド):None 0
 
 ![lvndmark_pic](/blogpic/eft-postfx/lvndmark.png)
 
-昼と夜のバランスが取れた設定だと思います。
+ランドマークの設定です、昼と夜のバランスが取れた設定だと思います。
 
 雰囲気を残しつつ敵を見やすくしたような設定だと感じました。
 
@@ -90,7 +90,9 @@ Colorblind mode(カラーブラインド):None 0
 
 ![Summit1g_pic](/blogpic/eft-postfx/Summit1g.png)
 
-上の LVNDMARK の設定を少し明るくしたような設定です。
+サミットの設定です。
+
+上のLVNDMARKの設定を少し明るくしたような設定です。
 
 ## QuattroAce
 
@@ -122,7 +124,7 @@ Colorblind mode(カラーブラインド):None 0
 
 ![QuattroAce_pic](/blogpic/eft-postfx/QuattroAce.png)
 
-個人的にこの設定が一番見やすかったです。
+クアトロエースの設定です、個人的にこの設定が一番見やすかったです。
 
 ただし夜や室内が見やすい分日中の外や光がまぶしかったです。
 
@@ -156,7 +158,7 @@ Colorblind mode(カラーブラインド): None 0
 
 ![Pestily_pic](/blogpic/eft-postfx/Pestily.png)
 
-雰囲気重視の設定だと感じました。
+ペストリーの設定です、雰囲気重視の設定だと感じました。
 
 正直暗くて敵は見にくかったです。
 
