@@ -3,7 +3,7 @@ title: "【EFT】タルコフで便利なWebサイト"
 date: "2021-12-20"
 category: "game"
 description: "EFTで知っていると便利なWebサイトをいくつかご紹介します。マーケットやマップなど様々なEFTに関するWebサイトがたくさんあります。そのうち自分がよく使っているものを紹介します。"
-update: "2021-03-02"
+update: "2021-12-20"
 tag: ["Escape from tarkov"]
 ---
 
