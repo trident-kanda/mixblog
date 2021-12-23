@@ -7,7 +7,6 @@ update: "2021-12-20"
 tag: ["Escape from tarkov"]
 ---
 
-<!-- descriptionは100文字前後 -->
 
 EFTで知っていると便利なWebサイトをいくつかご紹介します。
 

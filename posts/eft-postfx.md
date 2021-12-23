@@ -7,7 +7,6 @@ update: "2021-03-02"
 tag: ["Escape from tarkov"]
 ---
 
-<!-- descriptionは100文字前後 -->
 
 tarkovの重要な設定の一つであるPOSTFX、設定をすることで視認性が上がり夜でも敵を先に発見できるなど、有利にゲームを進めることができます。
 
