@@ -19,7 +19,7 @@ const Game = ({ length, postsData, lateStart, popularData }: categoryprops) => {
   return (
     <div>
       <Head>
-        <title>Game | MIXBLOGG</title>
+        <title>Game | MIXBLOG</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="robots" content="noindex" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
